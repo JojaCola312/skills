@@ -1,0 +1,10 @@
+*.xlsx
+/ppt-skill-report
+*.docx
+*.png
+*.js
+conference_compare_result.json
+conference_names_snapshot.json
+craft-report-excel/scripts/__pycache__/fill_report_workbook.cpython-312.pyc
+craft-report-excel/scripts/fill_report_workbook.py
+craft-report-excel/scripts/fill_report_workbook.py
