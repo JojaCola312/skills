@@ -3,7 +3,7 @@
 Use this file as the baseline conference pool.
 
 This is not just a name list.
-Each seed family should include enough tracking anchors so the run can search by organizer, source domain, and aliases instead of relying on the conference title alone.
+Each seed family should include enough tracking anchors so the run can search by stable source domain and keywords instead of relying on the conference title alone.
 
 Rules:
 
@@ -18,8 +18,6 @@ Rules:
 Each seed family should provide as many of the following as possible:
 
 - `标准名`: the canonical family name used in the ledger
-- `别名`: common alternate names, abbreviations, prior-edition wording, or variant Chinese names
-- `主办方/机构`: organizer, host, alliance, society, exhibition brand, or institution
 - `优先来源`: stable source domains or organizer pages to check first
 - `追踪关键词`: short keyword combinations to use when direct URLs are not available
 - `默认去向`: `国内会议` or `持续跟踪名单`
@@ -39,8 +37,6 @@ Source-anchor rule:
 #### IFWS & SSLCHINA
 
 - 标准名: IFWS & SSLCHINA
-- 别名: 国际第三代半导体论坛, 中国国际半导体照明论坛, IFWS, SSLCHINA
-- 主办方/机构: CASA, IFWS, SSLCHINA
 - 优先来源:
   - https://www.casa-china.cn/
 - 追踪关键词:
@@ -52,8 +48,6 @@ Source-anchor rule:
 #### APCSCRM
 
 - 标准名: APCSCRM
-- 别名: 亚太碳化硅及相关材料国际会议, APCSCRM 2025, APCSCRM 2026
-- 主办方/机构: APCSCRM organizing committee
 - 优先来源:
 - 追踪关键词:
   - APCSCRM 中国
@@ -63,8 +57,6 @@ Source-anchor rule:
 #### 大湾区化合物半导体生态大会家族
 
 - 标准名: 大湾区化合物半导体生态大会家族
-- 别名: 大湾区化合物半导体应用生态大会
-- 主办方/机构: 第三代半导体产业技术创新战略联盟 (CASA)
 - 优先来源:
 - 追踪关键词:
   - 大湾区 化合物半导体 生态大会
@@ -74,8 +66,6 @@ Source-anchor rule:
 #### 行家说三代半家族
 
 - 标准名: 行家说三代半家族
-- 别名: 行家说三代半年会, 行家极光奖, 碳化硅氮化镓产业高峰论坛
-- 主办方/机构: 行家说三代半
 - 优先来源:
  - https://www.hjssemi.com/
  - https://www.hjssemi.com/files
@@ -89,8 +79,6 @@ Source-anchor rule:
 #### SEMICON China / 同期活动家族
 
 - 标准名: SEMICON China / 同期活动家族
-- 别名: SEMICON China, SEMICON/FPD China, CS Asia Conference, HIIC
-- 主办方/机构: SEMI
 - 优先来源:
   - https://www.semiconchina.org/
   - https://www.semiconchina.org/zh/1
@@ -109,8 +97,6 @@ Source-anchor rule:
 #### CSTIC 家族
 
 - 标准名: CSTIC 家族
-- 别名: 集成电路科学技术大会, CSTIC, Conference of Science & Technology for Integrated Circuits
-- 主办方/机构: SEMI, IEEE
 - 优先来源:
  - https://www.semiconchina.org/zh/5
 - 追踪关键词:
@@ -120,21 +106,18 @@ Source-anchor rule:
 
 #### 湾芯展
 
-- 标准名: 湾芯展
-- 别名: 湾芯展 WESEMiBAY, 湾区半导体产业生态博览会
-- 主办方/机构: 湾芯展主办方
+- 标准名: 湾区半导体产业生态博览会 湾芯展
 - 优先来源:
  - https://www.semibay.cn/
 - 追踪关键词:
   - 湾芯展 2026
   - WESEMiBAY 2026
+  - 湾区半导体产业生态博览会 2026
 - 默认去向: 国内会议
 
 #### 中国（深圳）国际半导体展览会
 
 - 标准名: 中国（深圳）国际半导体展览会
-- 别名: 深圳国际半导体产业及应用展览会
-- 主办方/机构: 深圳半导体展主办方
 - 优先来源:
  - http://www.semiconductor-expo.com/index.asp
 - 追踪关键词:
@@ -145,8 +128,6 @@ Source-anchor rule:
 #### 武汉国际半导体产业博览会
 
 - 标准名: 武汉国际半导体产业博览会
-- 别名: 武汉半导体博览会
-- 主办方/机构: 武汉半导体展主办方
 - 优先来源:
  - https://powersemi-expo.com/
 - 追踪关键词:
@@ -156,8 +137,6 @@ Source-anchor rule:
 #### CSPT 家族
 
 - 标准名: CSPT 家族
-- 别名: 中国半导体封测展暨封测技术与市场大会, 中国半导体封装测试展, CSPT
-- 主办方/机构: CSPT 主办方
 - 优先来源:
  - https://www.cspt-expo.com/
 - 追踪关键词:
@@ -170,9 +149,8 @@ Source-anchor rule:
 #### 先进封装可靠性技术暨互连材料大会
 
 - 标准名: 先进封装可靠性技术暨互连材料大会
-- 别名: 先进封装可靠性大会, 互连材料大会
-- 主办方/机构: 封装可靠性相关主办方
 - 优先来源:
+ - https://www.fsemi.tech/cms/xinwenkuaixun.html
 - 追踪关键词:
   - 先进封装 可靠性 互连材料 大会
 - 默认去向: 国内会议
@@ -180,8 +158,6 @@ Source-anchor rule:
 #### 集成电路可靠性及失效分析验证实践专题研讨会
 
 - 标准名: 集成电路可靠性及失效分析验证实践专题研讨会
-- 别名: 可靠性失效分析专题研讨会
-- 主办方/机构: 检测/验证相关主办方
 - 优先来源:
 - 追踪关键词:
   - 集成电路 可靠性 失效分析 验证 实践
@@ -190,8 +166,6 @@ Source-anchor rule:
 #### 集成电路特色工艺与先进封装测试产业技术论坛家族
 
 - 标准名: 集成电路特色工艺与先进封装测试产业技术论坛家族
-- 别名: 集成电路特色工艺与先进封装测试产业技术论坛, 成电集成电路行业校友会年会
-- 主办方/机构: 电子科技大学相关校友会/论坛主办方
 - 优先来源:
 - 追踪关键词:
   - 特色工艺 先进封装测试 产业技术论坛
@@ -200,8 +174,6 @@ Source-anchor rule:
 #### TCPMC 家族
 
 - 标准名: TCPMC 家族
-- 别名: 高导热封装材料创新应用论坛, TCPMC
-- 主办方/机构: TCPMC 主办方
 - 优先来源:
 - 追踪关键词:
   - TCPMC 高导热封装材料
@@ -210,8 +182,6 @@ Source-anchor rule:
 #### 晶圆制造关键材料与分析检测研讨会
 
 - 标准名: 晶圆制造关键材料与分析检测研讨会
-- 别名: 晶圆制造材料与检测研讨会
-- 主办方/机构: 材料/检测相关主办方
 - 优先来源:
 - 追踪关键词:
   - 晶圆制造 关键材料 分析检测 研讨会
@@ -220,8 +190,6 @@ Source-anchor rule:
 #### 光刻胶及集成电路材料研讨会
 
 - 标准名: 光刻胶及集成电路材料研讨会
-- 别名: 光刻胶及集成电路材料先进技术和产业应用研讨会
-- 主办方/机构: 集成电路材料相关主办方
 - 优先来源:
 - 追踪关键词:
   - 光刻胶 集成电路 材料 研讨会
@@ -230,8 +198,6 @@ Source-anchor rule:
 #### 半导体器件与加工工艺论坛
 
 - 标准名: 半导体器件与加工工艺论坛
-- 别名: 器件与加工工艺论坛
-- 主办方/机构: 半导体器件/工艺论坛主办方
 - 优先来源:
 - 追踪关键词:
   - 半导体器件 加工工艺 论坛
@@ -242,8 +208,6 @@ Source-anchor rule:
 #### 全国半导体物理学术会议家族
 
 - 标准名: 全国半导体物理学术会议家族
-- 别名: 第二十五届全国半导体物理学术会议, 全国半导体物理学术会议
-- 主办方/机构: 半导体物理相关学会/高校
 - 优先来源:
 - 追踪关键词:
   - 全国半导体物理学术会议
@@ -252,8 +216,6 @@ Source-anchor rule:
 #### 中国电子学会青年年会家族
 
 - 标准名: 中国电子学会青年年会家族
-- 别名: 中国电子学会青年年会, 半导体青年学术会议
-- 主办方/机构: 中国电子学会
 - 优先来源:
   - https://www.cie.org.cn/
 - 追踪关键词:
@@ -263,8 +225,6 @@ Source-anchor rule:
 #### 空天集成电路与微系统重点实验室研讨会家族
 
 - 标准名: 空天集成电路与微系统重点实验室研讨会家族
-- 别名: 空天集成电路与微系统工信部重点实验室学术研讨会
-- 主办方/机构: 南航集成电路学院/重点实验室
 - 优先来源:
 - 追踪关键词:
   - 空天 集成电路 微系统 重点实验室 学术研讨会
@@ -273,8 +233,6 @@ Source-anchor rule:
 #### 芯和半导体用户大会家族
 
 - 标准名: 芯和半导体用户大会家族
-- 别名: 芯和半导体用户大会, Xpeedic 用户大会
-- 主办方/机构: 芯和半导体
 - 优先来源:
 - 追踪关键词:
   - 芯和 半导体 用户大会
@@ -284,8 +242,6 @@ Source-anchor rule:
 #### ACCON 高端芯片产业创新发展大会家族
 
 - 标准名: ACCON 高端芯片产业创新发展大会家族
-- 别名: ACCON 高端芯片产业创新发展大会
-- 主办方/机构: ACCON 主办方
 - 优先来源:
 - 追踪关键词:
   - ACCON 高端芯片 产业创新发展大会
@@ -294,8 +250,6 @@ Source-anchor rule:
 #### 先进封装开发者大会家族
 
 - 标准名: 先进封装开发者大会家族
-- 别名: 先进封装开发者大会, 机器人与汽车芯片专场
-- 主办方/机构: 先进封装开发者大会主办方
 - 优先来源:
 - 追踪关键词:
   - 先进封装 开发者大会
@@ -305,8 +259,6 @@ Source-anchor rule:
 #### 赛默飞半导体解决方案研讨会家族
 
 - 标准名: 赛默飞半导体解决方案研讨会家族
-- 别名: 赛默飞半导体解决方案研讨会
-- 主办方/机构: 赛默飞
 - 优先来源:
 - 追踪关键词:
   - 赛默飞 半导体 解决方案 研讨会
@@ -715,9 +667,8 @@ When matching a newly found event to a seed family:
 
 - accept naming variants
 - accept year changes
-- accept organizer wording changes
 - accept `论坛 / 大会 / 峰会 / 展览会 / 研讨会 / developer forum / workshop / symposium` variants when the family identity is clear
-- prefer matching by `主办方/机构 + 优先来源 + 别名` instead of conference title only
+- prefer matching by `标准名 + 优先来源 + 追踪关键词` instead of conference title only
 
 When uncertain whether a newly found event belongs to a seed family:
 

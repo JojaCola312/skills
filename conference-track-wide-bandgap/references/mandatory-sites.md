@@ -36,6 +36,7 @@ Core maintenance rule:
 - Source family: industry media and operator-style discovery domains
 - Primary URLs:
   - https://www.fsemi.tech/cms/semiconductor.html
+  - https://www.fsemi.tech/cms/xinwenkuaixun.html
   - https://www.hjssemi.com/ev/list
   - https://www.icsmart.cn/
 - Usage:
