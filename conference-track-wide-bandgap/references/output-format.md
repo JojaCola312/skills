@@ -1,169 +1,231 @@
 # Output Format
 
-Every response from this skill should use the following structure.
+Use this structure for every run. The goal is a maintainable semiconductor conference ledger, not a loose narrative summary.
 
-## Top Section
+Do not output only a short curated list. Output every collected domestic conference that passes the inclusion threshold in `collection-rules.md`.
 
-Start with a 2 to 4 line summary:
+## Top Summary
 
-- this run's verification date
-- how many international and domestic conferences were confirmed
-- how many entries remain in tracking status
+Start with 2 to 4 lines:
 
-## Main Sections
+- 核验日期
+- 确认国内会议数量
+- 持续跟踪数量
+
+Then add a short `重点提示` block before the main sections:
+
+- `高相关会议：` list 3 to 8 entries with the strongest semiconductor relevance
+- `临近会议：` list 3 to 8 entries that are not yet held and are currently actionable for attendance, registration, call for papers, exhibition, or agenda follow-up
+
+Rules for `临近会议`:
+
+- prioritize events that you can still attend, register for, submit to, exhibit at, or schedule against
+- prefer statuses such as `报名中`, `征稿中`, `议程已发布`, `即将举办`
+- do not include already ended events unless the user explicitly asks for retrospective review
+- if there are not enough upcoming actionable events, list fewer items rather than filling the block with expired meetings
+
+## Section Order
 
 Use these sections in order:
 
-1. `国际会议`
-2. `国内会议`
-3. `持续跟踪名单`
-4. `检索说明`
+1. `国内会议`
+2. `持续跟踪名单`
+3. `检索说明`
 
-## Required Fields Per Conference
+Within `国内会议`, sort all entries by `起止日期` ascending.
 
-For each conference, output the following fields in this order:
+This ordering is mandatory for:
+
+- the visible text output
+- any exported workbook / Excel table
+
+Before writing the final answer or generating the workbook, normalize dates and sort the main pool first.
+
+Ordering rules:
+
+- earlier upcoming events first
+- month-only dates after exact earlier dates within the same broad period
+- `待确认` dates last
+- already-ended events still stay in chronological position based on their actual event date
+- do not group entries by source, seed priority, relevance, or importance before date ordering
+
+## Required Fields Per Confirmed Conference
+
+For each conference in the main pool, output the following fields in this order:
 
 1. `会议名称`
-2. `简称`
-3. `会议方向`
-4. `地点`
-5. `时间`
-6. `规格`
-7. `举办组织`
-8. `流程`
-9. `最新状态`
-10. `关注理由`
-11. `来源`
+2. `会议主题`
+3. `届次/年份`
+4. `起止日期`
+5. `会议地点`
+6. `会议类型`
+7. `官方网站/报名链接`
+8. `主办单位/承办单位`
+9. `信息来源渠道`
+10. `与半导体相关性`
+11. `最新状态`
 12. `最后核验`
 
-## Field Definitions
+## Field Guidance
 
 ### 会议名称
 
-Use the official current edition title if available.
+Use the official current-edition title if available.
 
-### 简称
+### 会议主题
 
-Use the commonly recognized abbreviation, otherwise write `无`.
+Keep it short and factual. Prefer the official theme. If unavailable, summarize the conference focus in one line.
 
-### 会议方向
-
-One short line, for example:
-
-- `SiC / 功率器件`
-- `GaN / 氮化物材料与器件`
-- `第三代半导体 / 产业与应用`
-
-### 地点
-
-Use `城市, 国家/地区` or `城市` for domestic events.
-
-### 时间
-
-Use exact dates if available. Otherwise use month-level precision.
+### 届次/年份
 
 Examples:
 
-- `2026-06-07 至 2026-06-11`
+- `第十二届 / 2026年`
+- `2026年`
+- `待确认`
+
+### 起止日期
+
+Use exact dates when possible.
+
+Examples:
+
+- `2026-04-17 至 2026-04-19`
 - `2026-11`
 - `待确认`
 
-### 规格
+### 会议地点
 
-This is mandatory. Describe it using short tags and one sentence.
+Use `城市` or `城市 + 场馆` for domestic events.
 
-Recommended tag set:
+### 会议类型
 
-- `国际顶级学术会议`
-- `国际专业会议`
-- `国际产业论坛`
+Use concise labels, for example:
+
 - `国内全国性会议`
 - `国内行业论坛`
-- `国内区域活动`
+- `展会+论坛`
+- `专题研讨会`
+- `线上研讨会`
 
-Then add one short basis sentence, such as:
+### 官方网站/报名链接
 
-- `由 IEEE/专业学会主导，连续举办，学术影响力高。`
-- `由国家级创新平台和产业联盟推动，偏产业生态与合作。`
+Prefer the official site or registration page. If neither exists, use the highest-confidence official organizer page.
 
-### 举办组织
+If there is no standalone official site, use the best available registration or organizer link and do not exclude the event for that reason.
 
-List the host, organizer, sponsor, or technical co-sponsor when available.
+### 主办单位/承办单位
 
-### 流程
+List host, organizer, sponsor, and co-organizer when available.
 
-Summarize the event process or milestone chain. Prefer this order:
+### 信息来源渠道
 
-- `征稿`
-- `投稿截止`
-- `录用通知`
-- `注册`
-- `议程/教程`
-- `会议举行`
+State the source type, not just the URL.
 
-If the event is an industry forum without papers, use:
+Examples:
 
-- `报名/注册`
-- `议程发布`
-- `论坛举办`
-- `展览/对接活动`
+- `官网`
+- `主办方通知`
+- `协会/联盟公告`
+- `微信公众号`
+- `报名平台`
+- `展会官网`
 
-If only partial milestones are known, list only verified steps and mark the rest as `待确认`.
+You may append 1 to 3 links after the source-channel description.
+
+### 与半导体相关性
+
+This field is mandatory. Explain why the event belongs in this skill.
+
+Use one of these patterns:
+
+- `直接相关：会议主题即半导体/集成电路产业。`
+- `高度相关：设有SiC/GaN/化合物半导体/封装/材料/制造/测试专场。`
+- `扩展相关：虽为 broader industry event，但对半导体器件、封装、材料、可靠性、制造或应用有直接价值。`
 
 ### 最新状态
 
 Examples:
 
-- `官网已公布 2026 届时间与地点`
-- `2025 届已结束，下一届尚未公布`
-- `已开放征稿`
-- `已开放注册`
+- `已公布时间地点，报名开放中。`
+- `已发布议程，会议即将举行。`
+- `本届已结束，下一届尚未公布。`
+- `仅能确认本届信息，下一届待确认。`
+- `仅确认到会议通知/报名信息，更多细节待确认。`
 
-### 关注理由
+When possible, use status wording that makes actionability obvious, for example:
 
-Explain in one sentence why this event matters for wide-bandgap tracking.
-
-### 来源
-
-Provide 1 to 3 links, with the official link first.
+- `报名中`
+- `征稿中`
+- `招商中`
+- `议程已发布`
+- `即将举办`
+- `已结束`
 
 ### 最后核验
 
-Use the actual date of the current run.
+Use the actual verification date of the run.
 
-## Formatting Template
-
-Use this template per item:
-
-```md
-### 1. 会议名称
-
-- 简称：
-- 会议方向：
-- 地点：
-- 时间：
-- 规格：
-- 举办组织：
-- 流程：
-- 最新状态：
-- 关注理由：
-- 来源：
-- 最后核验：
-```
-
-## 持续跟踪名单
+## Ongoing Tracking List
 
 For conferences without a confirmed next edition, keep a compact entry with:
 
 - `会议名称`
 - `上一届信息`
+- `本轮核验结果`
 - `待跟踪点`
 - `优先检查网址`
 
-## 检索说明
+Seed-pool entries with no fresh update this round should appear here rather than disappearing.
+
+Keep `持续跟踪名单` grouped logically, but it does not need the same strict chronological ordering as the main pool.
+
+## Workbook Export Requirements
+
+If the run produces an Excel workbook, do not collapse the result into a single simplified sheet unless the user explicitly asks for a one-sheet version.
+
+Default workbook structure:
+
+1. `汇总信息`
+2. `国内会议`
+3. `持续跟踪名单`
+
+Workbook rules:
+
+- `汇总信息` must include at least:
+  - 核验日期
+  - 确认国内会议数量
+  - 持续跟踪数量
+- `国内会议` must contain the full domestic main pool, sorted by `起止日期` ascending
+- `持续跟踪名单` must contain seed-pool families whose next edition is still unconfirmed or weakly confirmed
+- do not merge `持续跟踪名单` into the main pool just to make the workbook shorter
+- do not omit `持续跟踪名单` from the workbook if the text response mentions it
+
+Coverage rule for workbook export:
+
+- every seed family must appear either in `国内会议` or in `持续跟踪名单`
+- do not reduce workbook coverage below the assembled text-response pool
+- if the workbook is narrower than the text pool, that is an export error, not an acceptable simplification
+
+## Sparsity Rule
+
+Missing fields must be written as `待确认`.
+
+Do not omit a relevant conference solely because:
+
+- official site is weak
+- agenda is not yet posted
+- organizer information is partial
+- the event is smaller than flagship conferences
+
+The output should prefer completeness with explicit uncertainty over a sparse but over-filtered list.
+
+## Retrieval Notes
 
 At the end, include:
 
-- recent search keywords used
-- mandatory sites checked
-- any unresolved ambiguities
+- 本次优先核验的种子会议家族
+- 本次使用的核心搜索词
+- 本次检查的强制来源
+- 本次新增会议家族
+- 仍未解决的歧义或缺口

@@ -1,0 +1,421 @@
+# Collection Rules
+
+Use this file to decide what to compile across the semiconductor industry, how to keep the conference pool broad but still relevant, and how to avoid drifting into generic tech-event noise.
+
+## Collection Goal
+
+Build a semiconductor-industry conference pool that is useful for long-term maintenance, not just a short list of near-term meetings.
+
+The output should therefore include:
+
+- confirmed upcoming conferences
+- recently held conferences that still matter for follow-up
+- recurring conference families whose next edition is not yet announced
+- partially verified but relevant meetings that should already enter the maintained pool
+
+Do not optimize for brevity. Optimize for pool completeness under a controlled semiconductor-industry boundary.
+
+Domestic China conference completeness is the target. Do not add overseas conferences unless the user explicitly asks for them.
+
+## Retrieval Order
+
+Every run should follow this order:
+
+1. check `seed-conference-families.md`
+2. sweep `mandatory-sites.md`
+3. run recent and near-term searches
+4. run adjacent-source searches
+5. add truly new conference families not already present in the seed pool
+
+Do not start from generic web search alone.
+
+Interpretation:
+
+- `seed-conference-families.md` defines the base pool that should persist
+- mandatory-source and web search are used to update the base pool, find new stable anchors, and add confirmed additions
+- search is not the authority for whether a seed family exists; it is the authority for whether there is new public evidence
+
+Role split:
+
+- `seed-conference-families.md`: conference objects that should persist in the ledger
+- `mandatory-sites.md`: source families that must be checked every run mainly to discover new conferences and new reusable anchors
+
+Do not duplicate conference-family definitions inside `mandatory-sites.md`.
+
+## Scope Boundary
+
+### Tier A: Always include
+
+Include these when verified:
+
+- semiconductor and integrated-circuit conferences
+- third-generation semiconductor conferences
+- wide-bandgap semiconductor conferences
+- SiC conferences
+- GaN conferences
+- Ga2O3 / AlN / ultra-wide-bandgap conferences
+- compound semiconductor conferences
+- power semiconductor and power device conferences
+- semiconductor manufacturing conferences
+- packaging, testing, materials, reliability, and failure-analysis conferences
+- major semiconductor exhibitions and industry summits
+
+### Tier B: Include when clearly relevant
+
+These are broader adjacent events and should be included only when at least one of the conditions below is satisfied:
+
+- the event materially serves the semiconductor supply chain or application ecosystem
+- the agenda includes semiconductor materials, devices, packaging, testing, reliability, manufacturing, or application-side tracks
+- the event is a recurring industry platform that the target workbook clearly treats as part of the tracking pool
+- the event is a major exhibition, summit, or forum where semiconductors are a substantive part of the agenda, exhibitor mix, or论坛结构
+
+Typical examples:
+
+- advanced packaging conferences
+- power module packaging and silver/copper sintering events
+- semiconductor materials and metrology forums
+- reliability and failure-analysis workshops
+- automotive electronics and e-mobility power-device events
+- major semiconductor exhibitions with semiconductor zones or forums
+- packaging, thermal, or module-assembly events that clearly serve semiconductor industrialization
+- application-side conferences where semiconductors are central to system performance
+
+### Tier C: Exclude by default
+
+Do not include these unless the semiconductor-industry link is explicit and strong:
+
+- generic integrated-circuit investment forums
+- broad AI chip or digital chip events with no power-device or material relevance
+- general electronics exhibitions with no semiconductor depth
+- purely optoelectronics events with no semiconductor-device or materials relevance
+- talent fairs, policy briefings, or award ceremonies that are not conference-style industry events
+
+## Search Window
+
+Every run must cover two windows:
+
+### Window 1: Recent and near-term search
+
+Search:
+
+- current year
+- next year
+- latest 3 to 6 months of published notices and recaps
+
+Purpose:
+
+- catch newly announced conferences
+- update dates, venues, agendas, and registration status
+
+### Window 2: Conference-pool completion search
+
+Search for:
+
+- recurring conference families already seen in prior runs
+- meetings that appear in the maintained workbook pattern even if not extremely recent
+- recently concluded events that should still stay in the pool for annual tracking
+
+Purpose:
+
+- avoid a narrow “only upcoming meetings” list
+- keep the tracking pool structurally complete
+
+### Window 3: Adjacent-source sweep
+
+Search for relevant items from:
+
+- organizer and association WeChat articles
+- registration platforms
+- invitation posters
+- event aggregation pages
+- industry media pages that quote organizer notices
+
+Purpose:
+
+- catch domestic and mid-sized events that do not maintain strong official sites
+- avoid under-collecting because only “website-grade” sources were searched
+
+## Domestic-First Bias
+
+When time or context is limited, stay within domestic coverage rather than expanding overseas coverage.
+
+That means:
+
+- check domestic seed families first
+- check domestic organizer, association, and WeChat source families first
+- prefer collecting more domestic relevant entries over polishing a small number of flagship events
+- do not let polished large-event domains crowd out lower-polish but relevant domestic events
+
+## Seed Pool Retention Rule
+
+Seed families are persistent ledger entries, not disposable search hits.
+
+Therefore:
+
+- if a seed family has fresh evidence this round, update it in the main pool
+- if a seed family has no fresh evidence this round but remains active or plausible, keep it in the output
+- if only a prior edition can be confirmed, keep it in `持续跟踪名单`
+- only remove a seed family when there is positive evidence that it is discontinued, renamed into another family, or no longer belongs in the semiconductor conference pool
+
+Export consequence:
+
+- every seed family must map to exactly one export destination in each run:
+  - `国内会议`
+  - `持续跟踪名单`
+- no seed family may silently disappear during workbook generation
+- if evidence is too weak for the main pool, demote it to `持续跟踪名单` instead of dropping it
+
+Do not silently drop a seed family just because this round's public results are sparse.
+
+## Search Strategy
+
+Use both English and Chinese searches. Mix semiconductor topic terms, format terms, and year terms.
+
+### Core topic terms
+
+- wide bandgap semiconductor
+- third generation semiconductor
+- semiconductor
+- integrated circuit
+- SiC
+- GaN
+- Ga2O3
+- AlN
+- compound semiconductor
+- power semiconductor
+- power device
+- semiconductor packaging
+- semiconductor test
+- semiconductor materials
+- semiconductor reliability
+- semiconductor manufacturing
+
+### Broader-but-allowed extension terms
+
+- advanced packaging
+- power module packaging
+- semiconductor packaging
+- advanced assembly
+- thermal management
+- reliability
+- failure analysis
+- materials
+- metrology
+- automotive electronics
+- e-mobility
+- module
+- inverter
+- charger
+- traction
+- exhibition
+- summit
+- forum
+- workshop
+- developer forum
+- user conference
+
+### Useful Chinese query patterns
+
+- `宽禁带半导体 会议 2026`
+- `第三代半导体 论坛 2026`
+- `半导体 会议 2026`
+- `集成电路 论坛 2026`
+- `碳化硅 氮化镓 会议 2026`
+- `化合物半导体 大会 2026`
+- `功率半导体 展会 2026`
+- `先进封装 会议 半导体 2026`
+- `半导体 可靠性 失效分析 会议 2026`
+- `半导体 材料 检测 论坛 2026`
+- `功率模块 封装 会议 2026`
+- `碳化硅 论坛 邀请函`
+- `氮化镓 开发者论坛`
+- `第三代半导体 展会 2026`
+- `化合物半导体 论坛 公众号`
+- `宽禁带半导体 论坛 邀请函`
+- `第三代半导体 大会 报名`
+- `碳化硅 氮化镓 峰会 公众号`
+- `半导体 封装 可靠性 公众号 会议`
+- `半导体 材料 检测 公众号 论坛`
+- `功率半导体 展会 深圳 武汉 苏州 上海`
+
+## Source Priority
+
+Prefer sources in this order:
+
+1. official conference site
+2. official organizer / host / sponsoring society page
+3. official exhibition or registration page
+4. official government / university / lab / park announcement
+5. reliable industry-media or organizer-operated article that clearly points to the event
+
+For many domestic events, official information may first appear in:
+
+- organizer WeChat articles
+- event mini-program pages
+- registration platforms
+- industry-association notices
+
+These may be used when a standalone official site does not exist. Do not reject a domestic event only because it lacks an English-style official conference website.
+
+Acceptable first-pass evidence for domestic events includes:
+
+- official or organizer WeChat article
+- organizer or association event notice
+- registration page
+- invitation poster or conference notice with verifiable organizer information
+
+Do not require all events to have a standalone official website before entering the pool.
+
+Long-term source-pool restriction:
+
+- do not keep questionnaire pages, office-doc pages, short-link landing pages, or poster-only links as persistent source-pool entries
+- these weak pages may be used as one-off supporting evidence in a run, but they should not become mandatory long-term source families
+- do not treat an official-looking topic page as a forced source if, in practice, it mostly acts as a registration carrier, event-operation page, or repost container rather than a stable primary organizer source
+- do not keep event-system subdomains or single-event registration hosts as persistent source-pool entries when they usually expire after the event closes
+
+## Mandatory Source Sweep
+
+Every run must do both:
+
+1. broad recent search
+2. required-site sweep using `mandatory-sites.md`
+
+Do not skip the mandatory sweep even if the broad search already returns enough items.
+
+When a seed family has no usable official site for the current edition, search by:
+
+- conference family name + 公众号
+- conference family name + 报名
+- conference family name + 通知
+- conference family name + 邀请函
+- conference family name + 议程
+
+Purpose of the search layers:
+
+- mandatory-source review: discover new conference families and recover new reusable anchors from expected source families
+- web search: find missing updates, alternate pages, and new conference families
+- both together should expand and maintain the seed pool rather than replace it
+
+Operational rule:
+
+- do not let mandatory-source review replace seed-family tracking
+- if a seed family already exists, its presence in the output should be governed by the seed pool first
+- use mandatory-source review mainly to enrich the seed pool with newly found conference families, stronger organizer pages, and new stable page anchors
+
+Important source-pool repair rule:
+
+- when a major exhibition or organizer domain has a dedicated `同期活动`, `论坛一览`, `program`, or topic-event index page, treat that page family as a first-class source rather than relying only on the homepage
+- this applies especially to `SEMICON China`, society annual-event pages, and official topic-conference portals
+
+## Normalization Rules
+
+- Merge duplicate mentions of the same conference family.
+- Prefer the current-edition official page when available.
+- If the next edition is not announced, keep the event in `持续跟踪名单`.
+- Keep one record per conference edition, not one record per article.
+- When multiple sources disagree, keep the higher-confidence value and mention the unresolved point in `检索说明`.
+
+## Ordering Rule
+
+Within `国内会议`, sort entries by date in ascending order.
+
+This is a hard requirement for both:
+
+- the text response
+- any generated workbook / Excel ledger
+
+Do not leave entries in retrieval order, source order, seed order, or relevance order after the main pool is assembled.
+
+Sorting guidance:
+
+- use the start date when exact range is available
+- use the known month when only month-level precision is available
+- put `待确认` dates after all dated entries
+- for already-ended events, still sort by their actual event date rather than pushing them to the top arbitrarily
+
+Date interpretation order:
+
+1. exact start date
+2. exact end date if the range is partially known
+3. month-level date
+4. year-level date
+5. `待确认`
+
+Excel / workbook rule:
+
+- sort the main conference sheet by `起止日期` ascending before export
+- if separate sheets exist, sort the main domestic sheet by `起止日期` ascending
+- if there is one combined main sheet, sort the full main pool chronologically
+- `持续跟踪名单` may remain grouped logically, but the main conference pool must be chronological
+
+The ledger should read like a chronological pipeline, not a random search dump.
+
+## Minimum Inclusion Threshold
+
+An event may enter the main pool if all of the following are true:
+
+1. the event name is identifiable
+2. at least one reliable source is available
+3. semiconductor-industry relevance is direct, high, or valid extended relevance
+4. at least one core fact is known beyond the name, such as date, location, organizer, or event type
+
+If these conditions are met, include the item even when some fields remain `待确认`.
+
+Seed families should be held to an even lower threshold:
+
+- if the family match is clear and at least one current or recent source exists, keep it in the pool
+- if only the prior edition is confirmed, move it to `持续跟踪名单` rather than omitting it
+
+## Completeness Rules
+
+- Do not output only “major confirmed meetings”.
+- List all collected meetings that pass the inclusion threshold.
+- Use concise field values instead of dropping an event because the dossier is not rich enough.
+- If the same event only has limited information, keep it in the main section with `待确认` fields rather than silently omitting it.
+- Reserve `持续跟踪名单` for conference families whose next edition is not yet confirmed, not for every partially filled entry.
+- Seed families that are still active should almost never disappear from the output entirely.
+
+## Prioritization Rule For Presentation
+
+After building the full pool, highlight two subsets for quick reading:
+
+1. high-relevance entries
+2. near-term entries
+
+High-relevance entries usually include:
+
+- third-generation semiconductor
+- compound semiconductor
+- SiC / GaN / Ga2O3 / AlN
+- power semiconductor / power device
+- semiconductor packaging, materials, testing, reliability, or manufacturing events with direct strategic value
+
+Near-term entries usually include:
+
+- events happening within the next 90 days
+- events currently open for registration, call for papers, sponsorship, or agenda release
+- events not yet held and still operationally actionable for attendance, submission, exhibition, or follow-up
+
+Near-term entries should exclude:
+
+- events already closed or already held, unless the user explicitly asks for retrospective summary
+- events whose only recent signal is a post-event recap
+
+If an event has already ended, it may stay in the main pool, but it should not be highlighted in `临近会议`.
+
+Do not let prioritization shrink the pool. Highlight first, then still output the full pool.
+
+## Output Intent
+
+The response should behave more like a maintained semiconductor conference ledger than a pure narrative report.
+
+That means the output should favor:
+
+- full-pool coverage
+- domestic coverage completeness
+- standardized fields
+- explicit source channels
+- stable date and location formatting
+- repeatable inclusion logic
+
+Use the structure in `output-format.md`.
