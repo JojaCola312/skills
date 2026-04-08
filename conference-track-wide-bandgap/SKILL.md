@@ -25,6 +25,22 @@ Use this skill when the user asks for `会议跟踪` or `conference track` in th
 8. Every seed-pool conference family must appear in exactly one place for each run: `国内会议` or `持续跟踪名单`. Do not silently drop seed entries during export.
 9. Do not turn this into a generic semiconductor conference dump.
 10. If semiconductor relevance is weak, exclude the event. If relevance is valid but fields are incomplete, keep it and mark missing fields as `待确认`.
+11. **自动更新种子池**：每次运行结束后，将新发现的、不在种子池中的会议家族动态添加到 `references/seed-conference-families.md` 文件末尾（在 `## Matching Guidance` 之前）。格式如下：
+    ```markdown
+    #### 新会议家族名称
+    - 标准名: 新会议家族名称
+    - 优先来源:
+      - https://官网链接（如已确认）
+    - 追踪关键词:
+      - 关键词1
+      - 关键词2
+    - 默认去向: 国内会议
+    ```
+    判断是否为"新会议家族"的标准：
+    - 与种子池中任一家族名称不匹配
+    - 会议主题与半导体直接相关或高度相关
+    - 有稳定的官方来源或主办方信息
+    - 预期未来会继续举办（非一次性活动）
 
 ## How To Work
 
