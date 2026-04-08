@@ -3,7 +3,9 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+from copy import copy
 from datetime import date, datetime, timedelta
+from functools import lru_cache
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -13,6 +15,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SKILL_DIR = SCRIPT_DIR.parent
 ASSETS_DIR = SKILL_DIR / "assets"
 DEFAULT_TEMPLATE = ASSETS_DIR / "craft_report_template.xlsx"
+REFERENCE_TEMPLATE = ASSETS_DIR / "工艺工程与制造部每日总结-open claw用.xlsx"
 
 UNIT_ROWS = {
     "光刻": (2, 3),
@@ -26,6 +29,8 @@ UNIT_ROWS = {
 }
 
 VALID_COLUMNS = ("B", "C", "D", "E", "F", "G")
+WEEKLY_COLUMNS = ("B", "G")
+DAILY_COLUMNS = ("C", "D", "E", "F")
 WEEKDAY_CN = {
     0: "周一",
     1: "周二",
@@ -36,10 +41,106 @@ WEEKDAY_CN = {
     6: "周日",
 }
 
+FALLBACK_CELL_LABELS = {
+    "B": {
+        "upper": "本周总结：",
+        "lower": "下周计划（如周六、周日计划加班，工作计划需在此处一并体现）：",
+    },
+    "C": {
+        "upper": "今日总结（如周六、周日有加班，工作总结需在此处体现）",
+        "lower": "次日计划：",
+    },
+    "D": {
+        "upper": "今日总结：",
+        "lower": "次日计划：",
+    },
+    "E": {
+        "upper": "今日总结：",
+        "lower": "次日计划：",
+    },
+    "F": {
+        "upper": "今日总结：",
+        "lower": "次日计划：",
+    },
+    "G": {
+        "upper": "本周总结：",
+        "lower": "下周计划（如周六、周日计划加班，工作计划需在此处一并体现）：",
+    },
+}
+
 
 def load_sheet(path: Path):
     wb = load_workbook(path)
     return wb, wb[wb.sheetnames[0]]
+
+
+def normalize_multiline_text(value: object) -> str:
+    if value is None:
+        return ""
+    text = str(value).replace("\r\n", "\n").replace("\r", "\n").strip()
+    return text
+
+
+def default_label_for_cell(column: str, position: str) -> str:
+    return FALLBACK_CELL_LABELS[column][position]
+
+
+def is_label_like(text: str) -> bool:
+    return ("总结" in text) or ("计划" in text)
+
+
+@lru_cache(maxsize=1)
+def load_reference_cell_labels() -> dict[str, dict[str, str]]:
+    labels: dict[str, dict[str, str]] = {}
+
+    if not REFERENCE_TEMPLATE.exists():
+        return labels
+
+    _, ws = load_sheet(REFERENCE_TEMPLATE)
+    for _, (upper_row, lower_row) in UNIT_ROWS.items():
+        for column, position, row in (
+            *((col, "upper", upper_row) for col in VALID_COLUMNS),
+            *((col, "lower", lower_row) for col in VALID_COLUMNS),
+        ):
+            text = normalize_multiline_text(ws[f"{column}{row}"].value)
+            first_line = text.split("\n", 1)[0] if text else ""
+            if is_label_like(first_line):
+                labels.setdefault(column, {})[position] = first_line
+
+    return labels
+
+
+def label_for_cell(column: str, position: str) -> str:
+    return load_reference_cell_labels().get(column, {}).get(position, default_label_for_cell(column, position))
+
+
+def ensure_wrapped_cell(ws, coordinate: str) -> None:
+    cell = ws[coordinate]
+    alignment = copy(cell.alignment)
+    alignment.wrap_text = True
+    cell.alignment = alignment
+
+
+def format_labeled_value(column: str, position: str, content: object) -> str:
+    label = label_for_cell(column, position)
+    text = normalize_multiline_text(content)
+
+    if not text:
+        return label
+
+    if text.startswith(label):
+        return text
+
+    return f"{label}\n{text}"
+
+
+def apply_default_body_labels(ws) -> None:
+    for upper_row, lower_row in UNIT_ROWS.values():
+        for col in VALID_COLUMNS:
+            ws[f"{col}{upper_row}"] = label_for_cell(col, "upper")
+            ws[f"{col}{lower_row}"] = label_for_cell(col, "lower")
+            ensure_wrapped_cell(ws, f"{col}{upper_row}")
+            ensure_wrapped_cell(ws, f"{col}{lower_row}")
 
 
 def resolve_source(source: Path | None) -> Path:
@@ -106,18 +207,17 @@ def clear_targets(ws, headers: dict[str, str] | None, units: dict[str, dict] | N
         for unit, column_map in units.items():
             upper_row, lower_row = UNIT_ROWS[unit]
             for col in column_map:
-                ws[f"{col}{upper_row}"] = None
-                ws[f"{col}{lower_row}"] = None
+                ws[f"{col}{upper_row}"] = label_for_cell(col, "upper")
+                ws[f"{col}{lower_row}"] = label_for_cell(col, "lower")
+                ensure_wrapped_cell(ws, f"{col}{upper_row}")
+                ensure_wrapped_cell(ws, f"{col}{lower_row}")
 
 
 def clear_all_report_content(ws) -> None:
     for col in VALID_COLUMNS:
         ws[f"{col}1"] = None
 
-    for upper_row, lower_row in UNIT_ROWS.values():
-        for col in VALID_COLUMNS:
-            ws[f"{col}{upper_row}"] = None
-            ws[f"{col}{lower_row}"] = None
+    apply_default_body_labels(ws)
 
 
 def apply_fixed_headers(ws, friday_value: str | None, explicit_headers: dict[str, str]) -> dict[str, str]:
@@ -126,6 +226,7 @@ def apply_fixed_headers(ws, friday_value: str | None, explicit_headers: dict[str
         headers.update(build_headers_for_friday(friday_value))
     for col, value in headers.items():
         ws[f"{col}1"] = value
+        ensure_wrapped_cell(ws, f"{col}1")
     return headers
 
 
@@ -175,9 +276,11 @@ def fill_workbook(
         upper_row, lower_row = UNIT_ROWS[unit]
         for col, cell_pair in column_map.items():
             if "upper" in cell_pair:
-                ws[f"{col}{upper_row}"] = cell_pair["upper"]
+                ws[f"{col}{upper_row}"] = format_labeled_value(col, "upper", cell_pair["upper"])
+                ensure_wrapped_cell(ws, f"{col}{upper_row}")
             if "lower" in cell_pair:
-                ws[f"{col}{lower_row}"] = cell_pair["lower"]
+                ws[f"{col}{lower_row}"] = format_labeled_value(col, "lower", cell_pair["lower"])
+                ensure_wrapped_cell(ws, f"{col}{lower_row}")
 
     wb.save(output)
 
