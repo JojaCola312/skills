@@ -38,7 +38,10 @@ Core maintenance rule:
   - https://www.fsemi.tech/cms/semiconductor.html
   - https://www.fsemi.tech/cms/xinwenkuaixun.html
   - https://www.hjssemi.com/ev/list
+  - https://www.eet-china.com/mp/c1
   - https://www.icsmart.cn/
+  - http://ecmr.org.cn/Article/InfoList
+  - https://www.chinanosz.com/subforum.html
 - Usage:
   - use to find clues, invitation notices, or references to organizer pages
   - do not treat media coverage alone as the sole basis for important conference families

@@ -159,6 +159,7 @@ Source-anchor rule:
 
 - 标准名: 集成电路可靠性及失效分析验证实践专题研讨会
 - 优先来源:
+ - https://www.chinaisti.com/index/Lists/index/catid/23.html
 - 追踪关键词:
   - 集成电路 可靠性 失效分析 验证 实践
 - 默认去向: 国内会议
@@ -167,13 +168,14 @@ Source-anchor rule:
 
 - 标准名: 集成电路特色工艺与先进封装测试产业技术论坛家族
 - 优先来源:
+ - https://icse.uestc.edu.cn/jxkb.htm
 - 追踪关键词:
   - 特色工艺 先进封装测试 产业技术论坛
 - 默认去向: 国内会议
 
-#### TCPMC 家族
+#### 高导热封装材料创新应用论坛 TCPMC 家族
 
-- 标准名: TCPMC 家族
+- 标准名: 高导热封装材料创新应用论坛 TCPMC 家族
 - 优先来源:
 - 追踪关键词:
   - TCPMC 高导热封装材料
@@ -191,6 +193,7 @@ Source-anchor rule:
 
 - 标准名: 光刻胶及集成电路材料研讨会
 - 优先来源:
+ - http://ecmr.org.cn/Article/InfoList
 - 追踪关键词:
   - 光刻胶 集成电路 材料 研讨会
 - 默认去向: 国内会议
@@ -199,6 +202,8 @@ Source-anchor rule:
 
 - 标准名: 半导体器件与加工工艺论坛
 - 优先来源:
+ - https://www.chinanosz.com/
+ - https://www.chinanosz.com/subforum.html
 - 追踪关键词:
   - 半导体器件 加工工艺 论坛
 - 默认去向: 国内会议
