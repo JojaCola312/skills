@@ -170,4 +170,5 @@ At the end, include:
 
 - recent search keywords used
 - mandatory companies checked
+- mandatory industry sources checked
 - unresolved ambiguities

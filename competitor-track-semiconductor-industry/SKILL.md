@@ -33,6 +33,7 @@ On every invocation, do all of the following:
 
 1. Search recent web results using current-year and next-year queries in both Chinese and English
 2. Search every company and URL listed in `references/mandatory-companies.md`
+3. Review the broad industry-source URLs listed in `references/mandatory-industry-sites.md`
 
 Do not skip the mandatory lists just because broad search results already look sufficient.
 
@@ -44,6 +45,8 @@ Prefer sources in this order:
 2. Official company newsroom / investor relations / product page
 3. Official government, exchange, university, park, or major partner announcement
 4. Reliable media or industry report quoting the official source
+
+Industry-source pages in `references/mandatory-industry-sites.md` are discovery inputs, not final confirmation anchors unless no stronger source exists.
 
 If sources disagree, prefer the highest-priority source and note the discrepancy.
 
@@ -71,7 +74,18 @@ For each company:
 - capture newly announced products, roadmap updates, partnerships, customer progress, expansion, and major updates
 - prefer primary pages over reposted media summaries
 
-### Step 3: Normalize and deduplicate
+### Step 3: Industry-source sweep
+
+Open or search the URLs in `references/mandatory-industry-sites.md`.
+
+For each source family:
+
+- use it to find competitor leads, not to replace company verification
+- follow a multi-hop review path: entry page -> relevant article or list page -> stronger source page when available
+- capture leads about products, cooperation, customer progress, expansion, manufacturing, and capital activity
+- when a lead is found, try to continue to the company site, partner site, or government/park announcement before finalizing it
+
+### Step 4: Normalize and deduplicate
 
 Merge duplicate signals that describe the same event, product, or announcement.
 
@@ -80,7 +94,7 @@ Keep:
 - the highest-confidence primary source
 - government, exchange, park, or partner-side proof if it materially strengthens the evidence
 
-### Step 4: Output in the required structure
+### Step 5: Output in the required structure
 
 Follow `references/output-format.md` exactly.
 
@@ -106,3 +120,4 @@ Follow `references/output-format.md` exactly.
 
 - Output schema and formatting rules: `references/output-format.md`
 - Mandatory competitor list: `references/mandatory-companies.md`
+- Mandatory broad industry sources: `references/mandatory-industry-sites.md`
