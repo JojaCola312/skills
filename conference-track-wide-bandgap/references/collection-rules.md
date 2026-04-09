@@ -26,6 +26,7 @@ Every run should follow this order:
 3. run recent and near-term searches
 4. run adjacent-source searches
 5. add truly new conference families not already present in the seed pool
+6. produce a seed-family audit status table before finalizing the run
 
 Do not start from generic web search alone.
 
@@ -51,6 +52,32 @@ Role split:
 - `mandatory-sites.md`: source families that must be checked every run mainly to discover new conferences and new reusable anchors
 
 Do not duplicate conference-family definitions inside `mandatory-sites.md`.
+
+## Seed-Family Audit Rule
+
+Every seed family must have an explicit per-run status.
+
+Required status values:
+
+- `已核验`
+- `多轮搜索未命中`
+- `仅弱证据`
+- `待人工确认`
+
+For each seed family, record:
+
+- standard family name
+- whether a priority URL existed
+- search status
+- search terms actually used this round
+- export destination:
+  - `国内会议`
+  - `持续跟踪名单`
+
+Completion rule:
+
+- do not finish a run if any seed family has no recorded status
+- if the output does not include seed-family totals and unresolved family names, the run is incomplete
 
 ## Scope Boundary
 
@@ -318,6 +345,14 @@ When a seed family has no usable official site for the current edition, search b
 - conference family name + 邀请函
 - conference family name + 议程
 
+Retry rule for no-URL seed families:
+
+1. conference family name + year
+2. conference family name + edition / session number + year
+3. conference family name + organizer / topic / short-name variant
+
+Only after at least 2 to 3 keyword variants fail may the family be marked as `多轮搜索未命中` or `待人工确认`.
+
 Purpose of the search layers:
 
 - mandatory-source review: discover new conference families and recover new reusable anchors from expected source families
@@ -399,6 +434,7 @@ Seed families should be held to an even lower threshold:
 
 - if the family match is clear and at least one current or recent source exists, keep it in the pool
 - if only the prior edition is confirmed, move it to `持续跟踪名单` rather than omitting it
+- if no current-edition source is found after required retries, keep the family in `持续跟踪名单` and surface it in the audit list instead of silently downgrading it to vague `待确认`
 
 ## Completeness Rules
 
@@ -408,6 +444,7 @@ Seed families should be held to an even lower threshold:
 - If the same event only has limited information, keep it in the main section with `待确认` fields rather than silently omitting it.
 - Reserve `持续跟踪名单` for conference families whose next edition is not yet confirmed, not for every partially filled entry.
 - Seed families that are still active should almost never disappear from the output entirely.
+- `待确认` is allowed only for specific fields or for seed families that already completed the required search retries.
 
 ## Prioritization Rule For Presentation
 

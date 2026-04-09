@@ -13,3 +13,4 @@ craft-report-excel/scripts/fill_report_workbook.py
 ccc/fix_compare_headers.py
 ccc/optimize_seed_families.py
 ccc/trim_seed_keywords.py
+ccc/build_report_compare_fixed.py

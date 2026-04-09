@@ -28,9 +28,36 @@ Rules for `临近会议`:
 
 Use these sections in order:
 
-1. `国内会议`
-2. `持续跟踪名单`
-3. `检索说明`
+1. `种子池核验清单`
+2. `国内会议`
+3. `持续跟踪名单`
+4. `检索说明`
+
+## Seed-Family Audit Section
+
+The first main section must be `种子池核验清单`.
+
+At the top of this section, output:
+
+- `种子池家族总数`
+- `已核验家族数`
+- `未完成家族数`
+- `未完成家族列表`
+
+Then provide one compact line per seed family with these fields:
+
+- `标准名`
+- `是否有优先来源`
+- `本轮搜索状态`
+- `本轮使用关键词`
+- `结果去向`
+
+Rules:
+
+- every seed family must appear once in this section
+- if a seed family has no line here, the run is incomplete
+- `未完成家族列表` must name every unresolved family explicitly
+- do not replace this section with a narrative summary
 
 Within `国内会议`, sort all entries by `起止日期` ascending.
 
@@ -225,6 +252,7 @@ The output should prefer completeness with explicit uncertainty over a sparse bu
 At the end, include:
 
 - 本次优先核验的种子会议家族
+- 种子池家族总数 / 已核验数 / 未完成数
 - 本次使用的核心搜索词
 - 本次检查的强制来源
 - 本次新增会议家族
