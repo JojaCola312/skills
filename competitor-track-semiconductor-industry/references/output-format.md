@@ -8,8 +8,9 @@ Start with a 3 to 5 line summary:
 
 - this run's verification date
 - how many competitors had confirmed updates
-- how many conference-related signals were found
 - how many product-related signals were found
+- how many cooperation / customer signals were found
+- how many capacity / capital signals were found
 - how many companies remain in tracking status
 
 ## Main Sections
@@ -17,11 +18,12 @@ Start with a 3 to 5 line summary:
 Use these sections in order:
 
 1. `重点结论`
-2. `会议动向`
-3. `产品动向`
-4. `其他竞争情报`
-5. `持续跟踪名单`
-6. `检索说明`
+2. `产品动向`
+3. `合作与客户`
+4. `产能与资本动向`
+5. `其他竞争情报`
+6. `持续跟踪名单`
+7. `检索说明`
 
 ## Required Fields Per Signal
 
@@ -50,9 +52,6 @@ Use the official English or Chinese company name that best matches the primary s
 
 Use one of:
 
-- `会议参会`
-- `会议演讲`
-- `会议赞助/展台`
 - `新产品`
 - `产品路线图`
 - `合作/客户`
@@ -66,7 +65,7 @@ Use one concise line summarizing the verified update.
 
 ### 关联会议/产品
 
-Use the official conference name or product family / product model when available.
+Use the product family, product model, project name, partner name, customer name, or facility name when available.
 
 ### 地点
 
@@ -88,14 +87,6 @@ Examples:
 
 This field is mandatory.
 
-For conference signals, use tags such as:
-
-- `国际旗舰会议`
-- `国际专业会议`
-- `国际产业展会`
-- `国内全国性会议`
-- `国内行业论坛`
-
 For product signals, use tags such as:
 
 - `正式发布`
@@ -104,6 +95,15 @@ For product signals, use tags such as:
 - `量产阶段`
 - `参数更新`
 
+For cooperation or business signals, use tags such as:
+
+- `战略合作`
+- `客户导入`
+- `项目落地`
+- `产线扩张`
+- `融资并购`
+- `组织调整`
+
 Then add one short basis sentence.
 
 ### 关键内容
@@ -111,9 +111,7 @@ Then add one short basis sentence.
 Summarize only the verified facts, such as:
 
 - what was launched
-- what was presented
-- what booth or speaking role was confirmed
-- what specification, rating, package, wafer size, or application was disclosed
+- what specification, rating, package, wafer size, application, customer, capacity, or investment signal was disclosed
 
 ### 竞争意义
 
@@ -124,8 +122,9 @@ Explain in one sentence why this update matters competitively.
 Examples:
 
 - `官网已发布`
-- `会议官网已列为赞助商`
 - `产品页已上线`
+- `合作方公告已发布`
+- `政府/园区公告已发布`
 - `媒体报道存在，但官网仍待确认`
 
 ### 来源
@@ -171,5 +170,4 @@ At the end, include:
 
 - recent search keywords used
 - mandatory companies checked
-- mandatory conference sites checked
 - unresolved ambiguities

@@ -4,6 +4,14 @@ Check every company in this list on every invocation of the skill, even if broad
 
 This file is expected to evolve. Replace or extend the seed list with your actual competitor set.
 
+Use a multi-hop review path for each company:
+
+1. entry page
+2. relevant section page, such as news / product / solution / investor / application
+3. concrete detail page
+
+Do not treat a homepage or list page alone as a completed company review.
+
 ## Seed List
 
 ### 三安半导体
@@ -43,7 +51,7 @@ This file is expected to evolve. Replace or extend the seed list with your actua
 
 - Prefer official company homepages, newsrooms, investor pages, and product pages.
 - Keep each company entry small and practical.
-- Add direct event, booth, or IR pages when a company repeatedly publishes there.
+- Add direct solution, product, newsroom, or IR pages when a company repeatedly publishes there.
 - When replacing a company, preserve:
   - company name
   - technical focus
