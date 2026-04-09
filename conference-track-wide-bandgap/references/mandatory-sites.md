@@ -44,6 +44,7 @@ Core maintenance rule:
   - https://www.chinanosz.com/subforum.html
 - Usage:
   - use to find clues, invitation notices, or references to organizer pages
+  - after entering a channel or list page, continue into a concrete article or event detail page instead of stopping at the list page
   - do not treat media coverage alone as the sole basis for important conference families
 - Why included: useful for supplement and expansion
 
@@ -54,6 +55,10 @@ Core maintenance rule:
   - https://www.semiconchina.org/
 - Backup approach:
   - search current-edition forum pages, concurrent-event overview pages, summit sections, and exhibitor-news sections on the same domains
+- Multi-hop expectation:
+  - start from the domain entry page
+  - continue into a concurrent-event, summit, forum, or program page
+  - then continue into at least one concrete event detail page
 - Why forced: this domain can surface multiple domestic conference families,同期活动, and organizer-level updates
 
 ## B-tier Discovery Sources
@@ -90,3 +95,4 @@ Reason:
 - do not promote a topic page into `A-tier` if it mostly behaves like a carrying page, registration page, or weak event landing page
 - if a source repeatedly fails to produce reusable conference data, demote or remove it
 - do not duplicate seed-specific deep links or single-conference official domains inside `mandatory-sites.md`; keep broader source-family entry points here and keep detailed page anchors in `seed-conference-families.md`
+- opening a homepage alone does not count as a completed `A-tier` review; use an entry -> section -> detail multi-hop path when the source supports it

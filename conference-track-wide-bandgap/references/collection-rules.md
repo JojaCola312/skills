@@ -29,6 +29,16 @@ Every run should follow this order:
 
 Do not start from generic web search alone.
 
+Multi-hop review rule:
+
+- do not treat the first reachable page as the final evidence page
+- for each priority source family, check at least:
+  - one entry page
+  - one relevant section or listing page
+  - one concrete detail page
+- if the checked page only contains navigation, cards, banners, or list summaries, the review is not complete
+- do not use a homepage-only read to decide that a conference family has no update
+
 Interpretation:
 
 - `seed-conference-families.md` defines the base pool that should persist
@@ -282,6 +292,24 @@ Every run must do both:
 
 Do not skip the mandatory sweep even if the broad search already returns enough items.
 
+Mandatory-source review must follow a multi-hop path whenever the site structure allows it.
+
+Default path:
+
+1. open the source-family entry page
+2. open the most relevant section page, such as:
+   - conference / forum / event
+   - 同期活动 / 活动一览
+   - program / agenda / schedule
+   - news / notice / update
+3. open at least one concrete detail page that contains a conference announcement, agenda, registration notice, or organizer update
+
+Completion rule:
+
+- if only the entry page was checked, the source review is incomplete
+- if a section page exists but no detail page was opened, do not treat that source family as fully checked
+- for large exhibition and organizer domains, prefer the event-list or concurrent-event branch over the homepage
+
 When a seed family has no usable official site for the current edition, search by:
 
 - conference family name + 公众号
@@ -306,6 +334,12 @@ Important source-pool repair rule:
 
 - when a major exhibition or organizer domain has a dedicated `同期活动`, `论坛一览`, `program`, or topic-event index page, treat that page family as a first-class source rather than relying only on the homepage
 - this applies especially to `SEMICON China`, society annual-event pages, and official topic-conference portals
+
+Examples of acceptable multi-hop confirmation:
+
+- `semiconchina.org` homepage -> concurrent-event / summit / forum index -> concrete forum page
+- society homepage -> conference list / annual-event page -> concrete conference notice
+- organizer portal -> semiconductor channel -> article or event detail page
 
 ## Normalization Rules
 
