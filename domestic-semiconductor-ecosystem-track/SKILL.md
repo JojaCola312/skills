@@ -1,6 +1,6 @@
 ---
 name: domestic-semiconductor-ecosystem-track
-description: "Track domestic semiconductor-related projects, talent-plan applications, and awards. Trigger when the user asks about 半导体人才申报, 人才申报, 人才计划, 人才项目, 项目申报, 半导体项目申报, 奖项申报, 科技奖项, 集成电路项目, 第三代半导体人才, or regional semiconductor ecosystem monitoring. In this skill, 人才 means talent-plan application, recognition, subsidy, and policy support rather than job seeking. Prioritize Zhejiang, Shanghai, and especially Ningbo Qianwan New Area."
+description: "Track domestic semiconductor-related projects, talent-plan applications, and awards across China. Trigger when the user asks about 半导体人才申报、人才申报、人才计划、人才项目、项目申报、半导体项目申报、奖项申报、科技奖项、集成电路项目，or semiconductor ecosystem monitoring. In this skill, 人才 means talent-plan application, recognition, subsidy, and policy support rather than job seeking."
 ---
 
 # Domestic Semiconductor Ecosystem Track
@@ -8,7 +8,7 @@ description: "Track domestic semiconductor-related projects, talent-plan applica
 Use this skill when the user asks to track domestic semiconductor-related:
 
 - projects
-- talent programs and申报
+- talent programs and talent-plan applications
 - awards
 - regional policy and ecosystem signals
 
@@ -26,6 +26,14 @@ This skill should also trigger when the request focuses on only one dimension, f
 - `集成电路项目`
 - `科技奖项`
 
+Region-priority examples:
+
+- `全国半导体人才申报`
+- `全国集成电路奖项跟踪`
+- `江苏半导体人才计划`
+- `上海集成电路项目申报`
+- `前湾新区半导体奖项`
+
 In this skill, `人才` means:
 
 - 人才计划
@@ -41,13 +49,12 @@ It does not primarily mean:
 - 普通社会招聘
 - 校园招聘
 
-Default regional priority:
+Default coverage rule:
 
-1. 宁波前湾新区
-2. 宁波
-3. 上海
-4. 浙江
-5. Other domestic regions only when clearly relevant
+1. Search and summarize on a national basis first.
+2. If the user explicitly names a region, province, city, district, or park, prioritize that region in the output while still checking national-level sources.
+3. If the user asks only one dimension such as 人才, 项目, or 奖项, keep the same national-default logic unless a region is explicitly specified.
+4. Do not default to a single city cluster unless the user explicitly asks for it.
 
 ## Scope
 
@@ -70,8 +77,8 @@ Relevant domains include:
 
 On every invocation, do both:
 
-1. Search recent results using current-year and previous-year queries in Chinese
-2. Search every required site listed in `references/mandatory-sites.md`
+1. Search recent results using current-year and previous-year queries in Chinese.
+2. Search every required site listed in `references/mandatory-sites.md`.
 
 Do not skip the mandatory site list just because broad search results already look sufficient.
 
@@ -82,7 +89,7 @@ Prefer sources in this order:
 1. Official government site
 2. Official park / district / new-area site
 3. Official science, industry, or talent authority page
-4. Official award, project, or recruitment notice page
+4. Official award, project, or notice page
 5. Official university / laboratory / institute page
 6. Reliable media quoting the official source
 
@@ -94,11 +101,13 @@ If multiple sources disagree, prefer the highest-priority source and note the di
 
 Use recent Chinese queries around the current year and previous year. Include combinations such as:
 
-- `半导体 项目 人才 奖项 2026 浙江`
-- `集成电路 项目 2026 上海`
-- `第三代半导体 人才 2026 宁波 前湾`
-- `集成电路 奖项 2026 浙江`
-- `前湾新区 半导体 项目 人才 奖项`
+- `半导体 项目 人才 奖项 2026`
+- `集成电路 项目 2026`
+- `第三代半导体 人才 2026`
+- `集成电路 奖项 2026`
+- `半导体 人才计划 申报 2026`
+- `半导体 科技奖 2026`
+- `集成电路 重点项目 2026`
 
 ### Step 2: Mandatory site sweep
 
@@ -134,6 +143,8 @@ Follow `references/output-format.md` exactly.
 - For `人才` requests, prioritize talent-plan application, title recognition, policy support, subsidy, shortlist, and award signals rather than job openings.
 - If a source is regionally important but the semiconductor relevance is indirect, include it only when the connection is explicit.
 - If a tracked region or organization has no new verified update, keep it in `持续跟踪名单`.
+- Unless the user narrows the scope, search and summarize on a national basis first, then highlight major provinces, cities, parks, and institutions.
+- If the user explicitly specifies a region, keep the same structure but order that region first and place national-level signals ahead of other non-requested regions.
 
 ## Quality Rules
 
@@ -146,4 +157,4 @@ Follow `references/output-format.md` exactly.
 ## References
 
 - Output schema and formatting rules: `references/output-format.md`
-- Mandatory regional site list: `references/mandatory-sites.md`
+- Mandatory regional and national site list: `references/mandatory-sites.md`

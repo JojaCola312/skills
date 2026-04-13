@@ -11,6 +11,7 @@ Start with a 3 to 5 line summary:
 - how many talent signals were confirmed
 - how many award signals were confirmed
 - how many entities remain in tracking status
+- what national or regional focus was actually used in this run
 
 ## Main Sections
 
@@ -108,7 +109,7 @@ Summarize only verified facts:
 
 ### 跟踪意义
 
-Explain in one sentence why this matters for regional semiconductor ecosystem tracking.
+Explain in one sentence why this matters for semiconductor ecosystem tracking.
 
 ### 最新状态
 
@@ -164,4 +165,5 @@ At the end, include:
 
 - recent search keywords used
 - mandatory sites checked
+- major national sources checked
 - unresolved ambiguities

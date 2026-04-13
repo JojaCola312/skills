@@ -208,6 +208,17 @@ Do not silently drop a seed family just because this round's public results are 
 
 Use both English and Chinese searches. Mix semiconductor topic terms, format terms, and year terms.
 
+For seed-family recovery, use `precision first, abstraction later`.
+
+That means:
+
+1. exact standard family name
+2. exact numbered-title variant
+3. exact abbreviation or branded short name
+4. only then broader topic combinations
+
+Do not begin no-URL seed recovery with stripped-down bag-of-words queries if the family name itself is already specific enough to search directly.
+
 ### Core topic terms
 
 - wide bandgap semiconductor
@@ -347,11 +358,32 @@ When a seed family has no usable official site for the current edition, search b
 
 Retry rule for no-URL seed families:
 
-1. conference family name + year
-2. conference family name + edition / session number + year
-3. conference family name + organizer / topic / short-name variant
+1. exact family name or exact known title variant + year
+2. exact family name + edition / session number + year
+3. short name / abbreviation + edition / session number + year
+4. family name + organizer / topic / host-city variant
 
 Only after at least 2 to 3 keyword variants fail may the family be marked as `多轮搜索未命中` or `待人工确认`.
+
+Precision-first query rule:
+
+- do not start with an over-abstracted keyword if the seed family already contains a more exact conference name
+- keep distinctive tokens such as:
+  - ordinal markers: `第十九届`, `第二十届`
+  - fixed abbreviations: `APCSCRM`, `CSPT`, `CSTIC`, `MEMS`
+  - branded family names: `湾芯展`, `行家说三代半`
+  - host-city qualifiers when they are part of the stable family expression
+- if the family is clearly a numbered recurring event, search the numbered form first and only broaden later
+- do not drop `全国`, `国际`, `先进封装`, `晶体生长与材料`, `微纳`, `功率半导体` and similar distinctive tokens too early
+
+Example:
+
+- preferred:
+  - `第二十届全国晶体生长与材料学术会议 2026`
+  - `全国晶体生长与材料学术会议 第二十届 2026`
+  - `晶体生长与材料学术会议 2026`
+- avoid using only:
+  - `全国晶体生长与材料 学术会议 2026`
 
 Purpose of the search layers:
 

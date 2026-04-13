@@ -29,6 +29,7 @@ Use this skill when the user asks for `会议跟踪` or `conference track` in th
 12. Treat a source review as incomplete if it never reaches at least one concrete detail page with conference-specific information.
 13. Every seed-pool family must be individually processed in every run. If a seed family has no priority URL, search it by keywords rather than skipping it.
 14. A run is not complete until it outputs a seed-family audit summary with: total seed families, verified seed families, unresolved seed families, and the unresolved family names.
+15. For no-URL seed families, search exact family names, numbered-title variants, and abbreviations before falling back to broader bag-of-words queries.
 15. Do not use `待确认` as a shortcut to stop searching. For a seed family without a usable URL, retry with at least 2 to 3 keyword variants before marking it unresolved.
 16. **自动更新种子池**：每次运行结束后，将新发现的、不在种子池中的会议家族动态添加到 `references/seed-conference-families.md` 文件末尾（在 `## Matching Guidance` 之前）。格式如下：
     ```markdown
