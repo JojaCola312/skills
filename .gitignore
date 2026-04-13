@@ -15,3 +15,4 @@ ccc/optimize_seed_families.py
 ccc/trim_seed_keywords.py
 ccc/build_report_compare_fixed.py
 conference-track-wide-bandgap/半导体竞争对手追踪报告_2026-04-09.md
+*.pyc

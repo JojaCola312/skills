@@ -32,7 +32,12 @@ Use this skill when the user wants to compile, update, or maintain a semiconduct
 15. For no-URL seed families, search exact family names, numbered-title variants, and abbreviations before falling back to broader bag-of-words queries.
 16. Token usage, context pressure, or "enough collected items" are not valid reasons to stop before every seed family has been processed.
 17. Do not use `待确认` as a shortcut to stop searching. For a seed family without a usable URL, retry with at least 2 to 3 keyword variants before marking it unresolved.
-18. Automatically append truly new conference families to `references/seed-conference-families.md` before `## Matching Guidance` when the run discovers a recurring domestic semiconductor conference family that is not already covered.
+18. When a seed family is marked for `Main Pool` or `Tracking List`, create the corresponding output entry immediately. Do not defer output creation until later cleanup.
+19. For major exhibitions, umbrella conferences, and platform-style annual events, confirm the parent event first and then add concurrent forums or sub-events. Do not let sub-events replace the parent event.
+20. If search results mostly return sub-events, topical sessions, or concurrent forums, run an extra search for the parent event itself before finalizing the family status.
+21. Before final output, review the `Result Destination` column row by row and confirm that every marked family has a matching output entry.
+22. Before marking the run complete, compare seed-family destination counts against actual output counts. If the counts do not match, the run is incomplete and must be corrected.
+23. Automatically append truly new conference families to `references/seed-conference-families.md` before `## Matching Guidance` when the run discovers a recurring domestic semiconductor conference family that is not already covered.
 
 ## New Seed-Family Append Rule
 

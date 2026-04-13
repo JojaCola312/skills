@@ -39,6 +39,8 @@ Multi-hop review rule:
   - one concrete detail page
 - if the checked page only contains navigation, cards, banners, or list summaries, the review is not complete
 - do not use a homepage-only read to decide that a conference family has no update
+- for major exhibitions, umbrella conferences, and platform-style annual events, confirm the parent event before deciding that sub-events are sufficient
+- if a source mostly returns concurrent forums or topical sessions, run an extra parent-event search before treating the family as covered
 
 Interpretation:
 
@@ -52,6 +54,21 @@ Role split:
 - `mandatory-sites.md`: source families that must be checked every run mainly to discover new conferences and new reusable anchors
 
 Do not duplicate conference-family definitions inside `mandatory-sites.md`.
+
+## Parent Event Priority Rule
+
+For large exhibitions, umbrella conferences, and platform-style annual events:
+
+1. confirm the parent event first
+2. create the parent-event ledger entry first
+3. then add concurrent forums, topical sessions, or sub-events that have independent tracking value
+4. do not treat sub-event coverage as equivalent to parent-event coverage
+
+Examples:
+
+- `SEMICON China` is a parent event; `CSTIC` and other concurrent forums are sub-events
+- `慕尼黑上海光博会` is a parent event; topic forums under it are sub-events
+- `高交会亚洲半导体与集成电路产业展` is a parent event; concurrent topic forums under it are sub-events
 
 ## Seed-Family Audit Rule
 
@@ -80,6 +97,9 @@ Completion rule:
 - if the output does not include seed-family totals and unresolved family names, the run is incomplete
 - token usage, context pressure, or model latency are not valid reasons to skip unchecked seed families
 - if the run cannot complete all seed-family checks, explicitly output it as an incomplete run rather than converting partial collection results into a final report
+- when a seed family is assigned to `Main Pool` or `Tracking List`, create the output entry immediately rather than deferring it to a later consolidation pass
+- before finalizing the run, review the audit table row by row and verify that every destination-marked family exists in the corresponding output section
+- compare destination counts against actual output counts; if the counts differ, the run is incomplete
 
 ## Scope Boundary
 
