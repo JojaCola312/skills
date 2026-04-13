@@ -59,6 +59,7 @@ Rules:
 - `未完成家族列表` must name every unresolved family explicitly
 - do not replace this section with a narrative summary
 - if any seed family remains unchecked, label the run as incomplete in this section instead of presenting the document as a finalized report
+- if a seed family is marked for `Main Pool` or `Tracking List`, the corresponding output row must already exist before finalization
 
 Within `国内会议`, sort all entries by `起止日期` ascending.
 
@@ -76,6 +77,8 @@ Ordering rules:
 - `待确认` dates last
 - already-ended events still stay in chronological position based on their actual event date
 - do not group entries by source, seed priority, relevance, or importance before date ordering
+- `Main Pool` versus `Tracking List` is a status split, not a domestic-versus-overseas split
+- if an event is held in China and is sufficiently verified, keep it in `Main Pool` even when the event title or organizer branding is international
 
 ## Required Fields Per Confirmed Conference
 
@@ -207,6 +210,18 @@ For conferences without a confirmed next edition, keep a compact entry with:
 Seed-pool entries with no fresh update this round should appear here rather than disappearing.
 
 Keep `持续跟踪名单` grouped logically, but it does not need the same strict chronological ordering as the main pool.
+
+## Search Notes Requirement
+
+Use the final section label `Search Notes` here.
+
+In the final `Search Notes` section, explicitly state whether browser fallback was used in this run.
+
+If browser fallback was used, include:
+
+- which seed families required browser fallback
+- that Bing search was used through Chrome DevTools MCP browser tools
+- whether the browser path produced a usable detail page or only weak evidence
 
 ## Workbook Export Requirements
 

@@ -38,6 +38,19 @@ Use this skill when the user wants to compile, update, or maintain a semiconduct
 21. Before final output, review the `Result Destination` column row by row and confirm that every marked family has a matching output entry.
 22. Before marking the run complete, compare seed-family destination counts against actual output counts. If the counts do not match, the run is incomplete and must be corrected.
 23. Automatically append truly new conference families to `references/seed-conference-families.md` before `## Matching Guidance` when the run discovers a recurring domestic semiconductor conference family that is not already covered.
+24. `Main Pool` versus `Tracking List` is a status split, not a domestic-versus-overseas split. Do not use `Tracking List` as an international-conference bucket.
+25. If a conference is held in China and is sufficiently verified, keep it in `Main Pool` even when the title, host, or branding is international.
+
+## Browser Fallback Rule
+
+When normal keyword search and priority-source review still fail to produce usable evidence for a seed family, use Chrome DevTools MCP browser search as a fallback path if that tool is available in the runtime.
+
+In that fallback path:
+
+- use Bing search first
+- open the most promising result pages rather than stopping at the search-results page
+- continue the same multi-hop review logic through entry pages, section pages, and detail pages
+- use this fallback selectively for unresolved seed families, not for the entire pool
 
 ## New Seed-Family Append Rule
 

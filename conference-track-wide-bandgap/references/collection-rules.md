@@ -41,6 +41,10 @@ Multi-hop review rule:
 - do not use a homepage-only read to decide that a conference family has no update
 - for major exhibitions, umbrella conferences, and platform-style annual events, confirm the parent event before deciding that sub-events are sufficient
 - if a source mostly returns concurrent forums or topical sessions, run an extra parent-event search before treating the family as covered
+- if priority URLs and normal search attempts still fail to return usable evidence, switch to Chrome DevTools MCP browser search if available
+- in that fallback path, search with Bing first because it is often more reachable from restricted network environments
+- do not stop at the Bing results page; open the most relevant result pages and continue the same entry-page -> section-page -> detail-page review logic
+- use browser fallback selectively for unresolved seed families rather than for the entire pool
 
 Interpretation:
 
@@ -69,6 +73,17 @@ Examples:
 - `SEMICON China` is a parent event; `CSTIC` and other concurrent forums are sub-events
 - `慕尼黑上海光博会` is a parent event; topic forums under it are sub-events
 - `高交会亚洲半导体与集成电路产业展` is a parent event; concurrent topic forums under it are sub-events
+
+## Main Pool Versus Tracking List Rule
+
+`Main Pool` and `Tracking List` are status categories, not geography categories.
+
+That means:
+
+1. do not treat `Tracking List` as an overseas or international bucket
+2. do not move a China-based event into `Tracking List` merely because the title contains `international`, `IEEE`, `Asia`, or other global branding
+3. if an event is held in China and is sufficiently verified, keep it in `Main Pool`
+4. use `Tracking List` only when the next edition is unconfirmed, the evidence is weak, or key fields remain unresolved after the required search attempts
 
 ## Seed-Family Audit Rule
 
