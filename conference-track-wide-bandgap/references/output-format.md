@@ -58,6 +58,7 @@ Rules:
 - if a seed family has no line here, the run is incomplete
 - `未完成家族列表` must name every unresolved family explicitly
 - do not replace this section with a narrative summary
+- if any seed family remains unchecked, label the run as incomplete in this section instead of presenting the document as a finalized report
 
 Within `国内会议`, sort all entries by `起止日期` ascending.
 

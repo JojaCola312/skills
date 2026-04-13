@@ -5,13 +5,13 @@ description: "Compile and maintain a domestic-China semiconductor conference led
 
 # Conference Ledger: Semiconductor Industry
 
-Use this skill when the user asks for `会议跟踪` or `conference track` in the semiconductor / integrated-circuit industry domain, and the goal is to compile, update, or maintain a conference ledger.
+Use this skill when the user wants to compile, update, or maintain a semiconductor-industry conference ledger for domestic China.
 
 ## What This Skill Covers
 
-- Domestic China conferences
-- Dedicated semiconductor, compound-semiconductor, and third-generation semiconductor events
-- Broader semiconductor industry events across design, manufacturing, packaging, materials, testing, reliability, and applications
+- domestic China conferences
+- dedicated semiconductor, compound-semiconductor, and third-generation semiconductor events
+- broader semiconductor industry events across design, manufacturing, packaging, materials, testing, reliability, and applications
 
 ## Non-Negotiable Rules
 
@@ -30,23 +30,32 @@ Use this skill when the user asks for `会议跟踪` or `conference track` in th
 13. Every seed-pool family must be individually processed in every run. If a seed family has no priority URL, search it by keywords rather than skipping it.
 14. A run is not complete until it outputs a seed-family audit summary with: total seed families, verified seed families, unresolved seed families, and the unresolved family names.
 15. For no-URL seed families, search exact family names, numbered-title variants, and abbreviations before falling back to broader bag-of-words queries.
-15. Do not use `待确认` as a shortcut to stop searching. For a seed family without a usable URL, retry with at least 2 to 3 keyword variants before marking it unresolved.
-16. **自动更新种子池**：每次运行结束后，将新发现的、不在种子池中的会议家族动态添加到 `references/seed-conference-families.md` 文件末尾（在 `## Matching Guidance` 之前）。格式如下：
-    ```markdown
-    #### 新会议家族名称
-    - 标准名: 新会议家族名称
-    - 优先来源:
-      - https://官网链接（如已确认）
-    - 追踪关键词:
-      - 关键词1
-      - 关键词2
-    - 默认去向: 国内会议
-    ```
-    判断是否为"新会议家族"的标准：
-    - 与种子池中任一家族名称不匹配
-    - 会议主题与半导体直接相关或高度相关
-    - 有稳定的官方来源或主办方信息
-    - 预期未来会继续举办（非一次性活动）
+16. Token usage, context pressure, or "enough collected items" are not valid reasons to stop before every seed family has been processed.
+17. Do not use `待确认` as a shortcut to stop searching. For a seed family without a usable URL, retry with at least 2 to 3 keyword variants before marking it unresolved.
+18. Automatically append truly new conference families to `references/seed-conference-families.md` before `## Matching Guidance` when the run discovers a recurring domestic semiconductor conference family that is not already covered.
+
+## New Seed-Family Append Rule
+
+When adding a new conference family to `references/seed-conference-families.md`, use this structure:
+
+```md
+#### 新会议家族名称
+
+- 标准名: 新会议家族名称
+- 优先来源:
+  - https://官方链接（如已确认）
+- 追踪关键词:
+  - 关键词1
+  - 关键词2
+- 默认去向: 国内会议
+```
+
+Add a new family only when all of the following are true:
+
+- it does not already map to an existing seed family
+- its topic is directly or highly relevant to the semiconductor industry
+- there is at least one stable organizer, official, or high-confidence source
+- it is expected to recur rather than being a one-off activity
 
 ## How To Work
 

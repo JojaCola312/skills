@@ -78,6 +78,8 @@ Completion rule:
 
 - do not finish a run if any seed family has no recorded status
 - if the output does not include seed-family totals and unresolved family names, the run is incomplete
+- token usage, context pressure, or model latency are not valid reasons to skip unchecked seed families
+- if the run cannot complete all seed-family checks, explicitly output it as an incomplete run rather than converting partial collection results into a final report
 
 ## Scope Boundary
 
@@ -396,6 +398,7 @@ Operational rule:
 - do not let mandatory-source review replace seed-family tracking
 - if a seed family already exists, its presence in the output should be governed by the seed pool first
 - use mandatory-source review mainly to enrich the seed pool with newly found conference families, stronger organizer pages, and new stable page anchors
+- never stop at "enough collected items" while unchecked seed families still remain
 
 Important source-pool repair rule:
 
