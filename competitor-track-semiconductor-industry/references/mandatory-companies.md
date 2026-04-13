@@ -47,6 +47,14 @@ Do not treat a homepage or list page alone as a completed company review.
   - https://www.phlab.com.cn/news/
 - Why forced: Important domestic research and ecosystem signal source that may expose conference participation, joint projects, and technology commercialization trends.
 
+### 九峰山实验室
+
+- Focus: 化合物半导体、第三代半导体、特色工艺平台、成果转化与产业协同
+- URLs:
+  - https://www.jpl.org.cn/
+  - https://www.jpl.org.cn/news
+- Why forced: Important domestic laboratory and industrial-collaboration platform that may expose product, platform, project, partnership, and commercialization signals.
+
 ## Maintenance Rules
 
 - Prefer official company homepages, newsrooms, investor pages, and product pages.
