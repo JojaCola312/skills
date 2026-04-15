@@ -225,6 +225,12 @@ If browser fallback was used, include:
 
 ## Workbook Export Requirements
 
+Canonical-state rule:
+
+- update `conference-ledger.md` first
+- export Excel only after the Markdown ledger reflects the latest run state
+- do not manually diverge the workbook from the Markdown ledger
+
 If the run produces an Excel workbook, do not collapse the result into a single simplified sheet unless the user explicitly asks for a one-sheet version.
 
 Default workbook structure:

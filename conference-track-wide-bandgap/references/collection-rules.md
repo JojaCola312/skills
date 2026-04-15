@@ -26,7 +26,9 @@ Every run should follow this order:
 3. run recent and near-term searches
 4. run adjacent-source searches
 5. add truly new conference families not already present in the seed pool
-6. produce a seed-family audit status table before finalizing the run
+6. update `conference-ledger.md`
+7. produce a seed-family audit status table before finalizing the run
+8. regenerate Excel from `conference-ledger.md`
 
 Do not start from generic web search alone.
 
@@ -51,6 +53,9 @@ Interpretation:
 - `seed-conference-families.md` defines the base pool that should persist
 - mandatory-source and web search are used to update the base pool, find new stable anchors, and add confirmed additions
 - search is not the authority for whether a seed family exists; it is the authority for whether there is new public evidence
+- `conference-ledger.md` is the canonical run-state document that stores the current ledger, tracking items, and search notes
+- `seed-audit.md` stores the per-run seed-family verification state
+- exported Excel workbooks should be treated as derived artifacts generated from `conference-ledger.md`
 
 Role split:
 
@@ -115,6 +120,9 @@ Completion rule:
 - when a seed family is assigned to `Main Pool` or `Tracking List`, create the output entry immediately rather than deferring it to a later consolidation pass
 - before finalizing the run, review the audit table row by row and verify that every destination-marked family exists in the corresponding output section
 - compare destination counts against actual output counts; if the counts differ, the run is incomplete
+- update the corresponding Markdown ledger entry before considering the family processed
+- update `seed-audit.md` for the family in the same run
+- do not treat the Excel workbook as the only maintained state; the Markdown ledger must already be current before export
 
 ## Scope Boundary
 

@@ -77,7 +77,12 @@ Add a new family only when all of the following are true:
 
 ## How To Work
 
+- Maintain `references/conference-ledger.md` as the canonical working ledger.
+- Maintain `references/seed-audit.md` as the per-run audit file, separate from the canonical ledger.
+- Update the Markdown ledger first during each run, then regenerate Excel from the Markdown ledger at the end.
+- When re-checking unresolved conferences, update the same Markdown entries instead of rebuilding the ledger from scratch.
 - Use `references/collection-rules.md` for scope, inclusion, search, source priority, dedup, and export rules.
 - Use `references/mandatory-sites.md` for the required source sweep on every run.
 - Use `references/seed-conference-families.md` as the baseline conference pool that should be checked first.
 - Use `references/output-format.md` for the exact response structure and workbook expectations.
+- Use `scripts/sync_conference_ledger.py` to move data between the Markdown ledger and Excel workbook.
