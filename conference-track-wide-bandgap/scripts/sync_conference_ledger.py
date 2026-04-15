@@ -127,6 +127,8 @@ def dump_record_block(lines: List[str], title: str, record: Dict[str, str], orde
     lines.append(f"### {title}")
     for key in ordered_keys:
         lines.append(f"- {key}: {sanitize(record.get(key, ''))}")
+    if "Retrieval Hint" in record:
+        lines.append(f"- Retrieval Hint: {sanitize(record.get('Retrieval Hint', ''))}")
     lines.append("")
 
 
@@ -252,6 +254,41 @@ def parse_markdown_records(lines: List[str], section: str, record_key: str, orde
     return normalized
 
 
+def read_existing_hints(md_path: Path) -> Dict[Tuple[str, str], str]:
+    if not md_path.exists():
+        return {}
+    lines = md_path.read_text(encoding="utf-8").splitlines()
+    hints: Dict[Tuple[str, str], str] = {}
+    for section, record_key in [("Main Pool", "会议名称"), ("Tracking List", "会议名称")]:
+        in_section = False
+        current_title: str | None = None
+        current_hint = ""
+        for line in lines:
+            stripped = line.strip()
+            if stripped == f"## {section}":
+                in_section = True
+                current_title = None
+                current_hint = ""
+                continue
+            if in_section and stripped.startswith("## "):
+                if current_title is not None:
+                    hints[(section, current_title)] = current_hint
+                break
+            if not in_section:
+                continue
+            if stripped.startswith("### "):
+                if current_title is not None:
+                    hints[(section, current_title)] = current_hint
+                current_title = stripped[4:].strip()
+                current_hint = ""
+                continue
+            if current_title is not None and stripped.startswith("- Retrieval Hint:"):
+                current_hint = stripped.split(":", 1)[1].strip()
+        if in_section and current_title is not None:
+            hints[(section, current_title)] = current_hint
+    return hints
+
+
 def parse_markdown_summary(lines: List[str]) -> Dict[str, str]:
     summary: Dict[str, str] = {}
     in_section = False
@@ -306,6 +343,17 @@ def markdown_to_data(md_path: Path, audit_md_path: Path | None = None) -> Dict[s
         "seed_audit": audit_records,
         "search_notes": parse_markdown_notes(lines),
     }
+
+
+def attach_hints(data: Dict[str, object], hint_map: Dict[Tuple[str, str], str]) -> Dict[str, object]:
+    for section_name, key_name, data_key in [
+        ("Main Pool", "会议名称", "main_pool"),
+        ("Tracking List", "会议名称", "tracking_list"),
+    ]:
+        for record in data[data_key]:
+            hint = hint_map.get((section_name, record[key_name]), "")
+            record["Retrieval Hint"] = hint
+    return data
 
 
 def style_sheet(ws) -> None:
@@ -379,6 +427,7 @@ def main() -> None:
     args = parser.parse_args()
     if args.cmd == "xlsx-to-md":
         data = workbook_to_data(Path(args.xlsx))
+        data = attach_hints(data, read_existing_hints(Path(args.md)))
         Path(args.md).write_text(data_to_markdown(data), encoding="utf-8")
         if args.audit_md:
             Path(args.audit_md).write_text(audit_to_markdown(data), encoding="utf-8")
