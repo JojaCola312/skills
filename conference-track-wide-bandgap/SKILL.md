@@ -44,6 +44,12 @@ Use this skill when the user wants to compile, update, or maintain a semiconduct
 27. **Moving from Tracking to Main Pool requires two actions: (1) add a new entry to Main Pool with full details (会议名称, 会议主题, 届次/年份, 起止日期, 会议地点, 会议类型, 官方网站, 主办单位, 信息来源, 与半导体相关性, 最新状态, 最后核验), and (2) remove the corresponding entry from Tracking List. Do not skip either action.**
 28. **A conference should only stay in `Tracking List` if it remains unverified (未找到2026年明确信息) or has incomplete critical information (date/location unknown). Once verified, it graduates to Main Pool.**
 
+29. **CRITICAL: Never pause mid-run to wait for user confirmation. A run must be complete in one continuous execution: search all seed families → verify information → update ledger → sync Excel → output final report. Do not stop after searching only a few conferences and expect the user to prompt "continue".**
+
+30. **If you find yourself wanting to pause after 5-10 searches because "this seems like enough", STOP that impulse. Rule 16 already forbids this. Process every single seed family before concluding the run.**
+
+31. **The only valid reason to stop a run early is explicit user interruption (e.g., "stop", "pause", "that's enough for now"). Everything else — including token pressure, time spent, or partial completion — is not a valid stopping point.**
+
 ## Browser Fallback Rule
 
 When normal keyword search and priority-source review still fail to produce usable evidence for a seed family, use Chrome DevTools MCP browser search as a fallback path if that tool is available in the runtime.
