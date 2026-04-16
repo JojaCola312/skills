@@ -10,7 +10,7 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - In `Main Pool`, keep only sufficiently verified China-based events.
 - In `Tracking List`, keep unresolved, weak-evidence, or next-edition-unconfirmed events.
 - Prefer stable official or organizer links in `官方网站/报名链接`. If unavailable, keep `待确认` and record weak sources under `信息来源`.
-- Use `Retrieval Hint` to record how the event was found last time, such as source type, effective query, multi-hop path, or browser fallback.
+- Use `Retrieval Hint` to record how the event was found last time.
 - Use a fixed `Retrieval Hint` template. Do not invent free-form prose.
 - Keep values concise and field-based. Do not turn this ledger into a narrative report.
 
