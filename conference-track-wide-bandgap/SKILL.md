@@ -40,6 +40,9 @@ Use this skill when the user wants to compile, update, or maintain a semiconduct
 23. Automatically append truly new conference families to `references/seed-conference-families.md` before `## Matching Guidance` when the run discovers a recurring domestic semiconductor conference family that is not already covered.
 24. `Main Pool` versus `Tracking List` is a status split, not a domestic-versus-overseas split. Do not use `Tracking List` as an international-conference bucket.
 25. If a conference is held in China and is sufficiently verified, keep it in `Main Pool` even when the title, host, or branding is international.
+26. **CRITICAL: When a conference in `Tracking List` (持续跟踪名单) becomes verified with confirmed date and location, you MUST move it to `Main Pool` (国内会议) immediately. Never leave a verified conference in `Tracking List`.**
+27. **Moving from Tracking to Main Pool requires two actions: (1) add a new entry to Main Pool with full details (会议名称, 会议主题, 届次/年份, 起止日期, 会议地点, 会议类型, 官方网站, 主办单位, 信息来源, 与半导体相关性, 最新状态, 最后核验), and (2) remove the corresponding entry from Tracking List. Do not skip either action.**
+28. **A conference should only stay in `Tracking List` if it remains unverified (未找到2026年明确信息) or has incomplete critical information (date/location unknown). Once verified, it graduates to Main Pool.**
 
 ## Browser Fallback Rule
 
