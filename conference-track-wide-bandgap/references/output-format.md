@@ -256,6 +256,64 @@ Coverage rule for workbook export:
 - do not reduce workbook coverage below the assembled text-response pool
 - if the workbook is narrower than the text pool, that is an export error, not an acceptable simplification
 
+## CRITICAL: Count Validation Before Delivery （计数验证规则）
+
+**Before delivering any report or Excel workbook, you MUST run these validation checks:**
+
+### 1. 种子池核验清单验证
+```
+种子池核验清单总条目数
+= (标记为"国内会议"的数量)
++ (标记为"持续跟踪名单"的数量)
++ (未完成/待确认的数量)
+```
+
+### 2. Sheet计数一致性验证
+```
+汇总信息中"确认国内会议" = 国内会议sheet数据行数
+汇总信息中"持续跟踪名单" = 持续跟踪名单sheet数据行数
+国内会议sheet数据行数 = 种子池核验清单中"结果去向"为"国内会议"的条目数
+持续跟踪名单sheet数据行数 = 种子池核验清单中"结果去向"为"持续跟踪名单"的条目数
+```
+
+### 3. 命名一致性验证
+```
+对于种子池核验清单中的每个条目：
+  如果"结果去向" = "国内会议"：
+    此条目的"标准名"必须在"国内会议"sheet中找到完全匹配的"会议名称"
+  如果"结果去向" = "持续跟踪名单"：
+    此条目的"标准名"必须在"持续跟踪名单"sheet中找到完全匹配的"会议名称"
+```
+
+**如果任何验证失败，报告无效，必须在交付前修正。**
+
+### 验证示例
+
+正确的报告：
+```
+种子池核验清单: 100条
+  - 国内会议: 70条
+  - 持续跟踪名单: 25条
+  - 未完成: 5条
+
+国内会议sheet: 70条数据
+持续跟踪名单sheet: 25条数据
+汇总信息: 确认国内会议=70, 持续跟踪=25
+
+验证通过 ✓
+```
+
+错误的报告（需要修正）：
+```
+种子池核验清单: 显示76条标记为"国内会议"
+国内会议sheet: 只有61条数据  ← 错误！计数不匹配
+
+种子池核验清单: "湾芯展WESEMiBAY" 标记为国内会议
+国内会议sheet: 只有 "湾芯展WESEMiBAY 2026"  ← 错误！名称不匹配
+```
+
+**Never deliver a report with count or name mismatches.**
+
 ## Sparsity Rule
 
 Missing fields must be written as `待确认`.

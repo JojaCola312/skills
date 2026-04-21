@@ -13,29 +13,33 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 ## Summary
 
 - Report Title: 2026年中国半导体会议收集报告
-- 核验日期: 2026-04-16
+- 核验日期: 2026-04-20
 - 种子池家族总数: 96
 - 本轮已核验: 96
-- 确认国内会议: 62
-- 持续跟踪: 30
+- 确认国内会议: 68（合并处理后条目数）
+- 持续跟踪: 24
+- 合计: 92 条（部分种子家族合并）
+- 种子合并说明: 4个种子家族合并处理（SEMICON+CSTIC+CS Asia→1条等）
 
 ### 重点提示
 
 **高相关会议：**
-- SEMICON China 2026 / CS Asia / CSTIC（3月22-28日，上海，全产业链旗舰盛会）
-- 未来半导体产业创新大会（4月16-17日，苏州，宽禁带半导体热管理）
-- CSPSD 2026功率半导体器件与集成电路会议（6月11-13日，上海）
-- ICEPT 2026电子封装技术国际会议（8月5-7日，西安）
+- SEMICON China 2026 / CS Asia / CSTIC（3月25-27日，上海，已结束）
+- 九峰山论坛暨CSE化合物半导体博览会（4月23-25日，武汉，即将举办）
+- CSPSD 2026功率半导体器件与集成电路会议（6月11-13日/6月25-27日，上海）
+- FINE2026先进半导体产业大会（6月10-12日，上海）
 - CSEAC 2026半导体设备材料及核心部件展（8月31日-9月2日，无锡）
 - ICCAD Expo 2026（11月19-20日，北京）
+- IFWS & SSLCHINA第十二届国际第三代半导体论坛（11月，苏州）
 
 **临近会议：**
-- 未来半导体产业创新大会（4月16-17日，苏州，即将举办）
-- CSPSD 2026功率半导体器件与集成电路会议（6月11-13日，上海，征稿中）
-- 中国MEMS制造大会暨微纳制造与传感器展览会（苏州，时间待确认）
-- ICEPT 2026电子封装技术国际会议（8月5-7日，西安，征稿中）
+- 九峰山论坛暨CSE化合物半导体博览会（4月23-25日，武汉，本周即将举办！）
+- ACCSI第三代半导体检测技术创新与应用论坛（4月23日，北京）
+- 半导体新材料发展大会（4月15-17日，德阳）
+- CSPSD 2026功率半导体器件与集成电路会议（6月，上海，征稿中）
+- FINE2026先进半导体产业大会（6月10-12日，上海，早鸟报名中）
+- 世界氮化镓大会（7月31日，深圳）
 - CSEAC 2026半导体设备材料及核心部件展（8月31日-9月2日，无锡，招商中）
-- ICCAD Expo 2026（11月19-20日，北京，招商中）
 
 ## Main Pool
 
@@ -328,15 +332,15 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 会议名称: WSCE 2026世界半导体大会暨南京国际半导体博览会
 - 会议主题: 全球半导体产业交流
 - 届次/年份: 2026年
-- 起止日期: 2026-09-17 至 2026-09-19
+- 起止日期: 2026-06（待定）
 - 会议地点: 南京国际博览中心
 - 会议类型: 国际行业峰会
 - 官方网站/报名链接: https://www.wicassociation.org/
 - 主办单位: 世界半导体理事会(WSC)、中国半导体行业协会(CSIA)
-- 信息来源: 行业媒体；https://www.wicassociation.org/topics/25/wsce/
+- 信息来源: 行业媒体；https://www.wicassociation.org/topics/25/wsce/；知乎专栏
 - 与半导体相关性: 直接相关：半导体产业。
-- 最新状态: 筹备中
-- 最后核验: 2026-04-16
+- 最新状态: 筹备中，日期待定
+- 最后核验: 2026-04-20
 - Retrieval Hint: source=industry-media; query=世界半导体大会; path=homepage; url=https://www.wicassociation.org/
 
 ### 中国电子学会青年年会暨半导体青年学术会议
@@ -954,15 +958,108 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 最后核验: 2026-04-16
 - Retrieval Hint: source=web-search; query=ICRMS 可靠性维修性安全性; note=2026年
 
-## Tracking List
+### 第十九届中国电子信息年会
+- 会议名称: 第十九届中国电子信息年会
+- 会议主题: e创未来
+- 届次/年份: 第十九届 / 2026年
+- 起止日期: 2026-04-16 至 2026-04-19
+- 会议地点: 武汉光谷
+- 会议类型: 国内学术会议
+- 官方网站/报名链接: http://ceic.cie.org.cn/
+- 主办单位: 中国电子学会
+- 信息来源: 官网；http://ceic.cie.org.cn/；武汉市官网
+- 与半导体相关性: 高度相关：设有半导体/集成电路/先进封装/存算一体等专题论坛
+- 最新状态: 正在举办
+- 最后核验: 2026-04-20
+- Retrieval Hint: source=official-site; query=中国电子信息年会; path=homepage; url=http://ceic.cie.org.cn/
 
 ### IFWS & SSLCHINA 国际第三代半导体论坛
-- 会议名称: IFWS & SSLCHINA 国际第三代半导体论坛
-- 上一届信息: 第十二届国际第三代半导体论坛
-- 本轮核验结果: 官网访问不稳定，信息不完整
-- 待跟踪点: 确认2026年举办时间和地点
-- 优先检查网址: https://www.casa-china.cn/
-- Retrieval Hint: source=official-site; query=IFWS SSLCHINA; note=官网访问不稳定
+- 会议名称: 第十二届国际第三代半导体论坛 (IFWS) 暨第二十三届中国国际半导体照明论坛 (SSLCHINA)
+- 会议主题: 第三代半导体、半导体照明技术
+- 届次/年份: 第十二届 IFWS / 第二十三届 SSLCHINA / 2026年
+- 起止日期: 2026-11-XX（第十二届，官网确认2026年11月苏州举办，具体日期待公布）
+- 会议地点: 江苏苏州
+- 会议类型: 国际学术会议
+- 官方网站/报名链接: http://www.ifws.org.cn/
+- 主办单位: 第三代半导体产业技术创新战略联盟(CASA)
+- 信息来源: 官网；http://www.ifws.org.cn/
+- 与半导体相关性: 直接相关：第三代半导体材料与器件。
+- 最新状态: 论文征集中，第十二届确认2026年11月苏州
+- 最后核验: 2026-04-20
+- Retrieval Hint: source=official-site; query=IFWS SSLCHINA; path=homepage; url=http://www.ifws.org.cn/
+
+
+### 800VDC数据中心能源变革——储能与第三代半导体协同发展论坛
+- 会议名称: 800VDC数据中心能源变革——储能与第三代半导体协同发展论坛
+- 会议主题: 800VDC+第三代半导体+新型储能三位一体技术路径
+- 届次/年份: 2026年
+- 起止日期: 2026-04-10
+- 会议地点: 深圳
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.hjssemi.com/
+- 主办单位: 行家说三代半
+- 信息来源: 官网；https://www.hjssemi.com/
+- 与半导体相关性: 直接相关：第三代半导体在数据中心能源应用
+- 最新状态: 已结束
+- 最后核验: 2026-04-20
+
+### SiC赋能绿色出行与智慧能源技术研讨会
+- 会议名称: SiC赋能绿色出行与智慧能源技术研讨会
+- 会议主题: SiC在交通电动化与数字能源中的创新应用
+- 届次/年份: 2026年
+- 起止日期: 2026-06-03
+- 会议地点: 上海
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.hjssemi.com/
+- 主办单位: 行家说三代半
+- 信息来源: 官网；https://www.hjssemi.com/
+- 与半导体相关性: 直接相关：碳化硅功率器件应用
+- 最新状态: 即将举办
+- 最后核验: 2026-04-20
+
+### SPT2026功率半导体与先进封装技术论坛
+- 会议名称: SPT2026功率半导体与先进封装技术论坛
+- 会议主题: 功率半导体与先进封装技术演进方向、国产化路径
+- 届次/年份: 2026年
+- 起止日期: 2026-03-17
+- 会议地点: 上海
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: 
+- 主办单位: 佰事前沿
+- 信息来源: 行业媒体；https://www.sohu.com/a/992144214_121948416
+- 与半导体相关性: 直接相关：功率半导体与先进封装
+- 最新状态: 已结束
+- 最后核验: 2026-04-20
+
+### 异构集成（先进封装）国际会议：AI算力与CPO
+- 会议名称: 异构集成（先进封装）国际会议：AI算力与CPO
+- 会议主题: AI算力与CPO，2.5D/3D异构集成、硅光、HBM、Chiplet
+- 届次/年份: 2026年
+- 起止日期: 2026-03-24
+- 会议地点: 上海浦东嘉里大酒店
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.semiconchina.org/zh/2265
+- 主办单位: SEMI中国
+- 信息来源: 官网；https://www.semi.org.cn/
+- 与半导体相关性: 直接相关：先进封装与异构集成是半导体核心方向
+- 最新状态: 已结束
+- 最后核验: 2026-04-20
+
+### 破局·赋能——GaN氮化镓全场景应用技术研讨会
+- 会议名称: 破局·赋能——GaN氮化镓全场景应用技术研讨会
+- 会议主题: GaN技术在多元场景中的落地路径
+- 届次/年份: 2026年
+- 起止日期: 2026-08-27
+- 会议地点: 深圳
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.hjssemi.com/
+- 主办单位: 行家说三代半
+- 信息来源: 官网；https://www.hjssemi.com/
+- 与半导体相关性: 直接相关：氮化镓功率器件应用
+- 最新状态: 报名中
+- 最后核验: 2026-04-20
+
+## Tracking List
 
 ### 集成电路产业超净技术创新发展大会
 - 会议名称: 集成电路产业超净技术创新发展大会
@@ -1036,14 +1133,6 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 优先检查网址: 待确认
 - Retrieval Hint: source=industry-media; query=AI新材料大会; note=未找到明确信息
 
-### 800VDC数据中心能源变革论坛
-- 会议名称: 800VDC数据中心能源变革——储能与第三代半导体协同发展论坛
-- 上一届信息: 待确认
-- 本轮核验结果: 未找到2026年明确信息
-- 待跟踪点: 确认举办时间和地点
-- 优先检查网址: 待确认
-- Retrieval Hint: source=industry-media; query=800VDC数据中心 第三代半导体; note=未找到明确信息
-
 ### 抛光研磨抛光材料大会
 - 会议名称: 抛光研磨抛光材料大会暨半导体与光学材料超精密加工论坛
 - 上一届信息: 待确认
@@ -1075,14 +1164,6 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 待跟踪点: 确认举办时间和地点
 - 优先检查网址: 待确认
 - Retrieval Hint: source=industry-media; query=军民两用功率半导体; note=未找到明确信息
-
-### SiC赋能绿色出行与智慧能源技术研讨会
-- 会议名称: SiC赋能绿色出行与智慧能源技术研讨会
-- 上一届信息: 待确认
-- 本轮核验结果: 未找到2026年明确信息
-- 待跟踪点: 确认举办时间和地点
-- 优先检查网址: 待确认
-- Retrieval Hint: source=industry-media; query=SiC 绿色出行 智慧能源; note=未找到明确信息
 
 ### 固态变压器、固态断路器展览会
 - 会议名称: 固态变压器、固态断路器展览会（作为"全电展"一部分）
@@ -1124,22 +1205,6 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 优先检查网址: 待确认
 - Retrieval Hint: source=industry-media; query=汉高 半导体材料 车规; note=未找到明确信息
 
-### SPT功率半导体与先进封装技术论坛
-- 会议名称: SPT功率半导体与先进封装技术论坛
-- 上一届信息: 待确认
-- 本轮核验结果: 未找到2026年明确信息
-- 待跟踪点: 确认举办时间和地点
-- 优先检查网址: 待确认
-- Retrieval Hint: source=industry-media; query=SPT 功率半导体 先进封装; note=未找到明确信息
-
-### 异构集成国际会议
-- 会议名称: 异构集成（先进封装）国际会议：AI算力与CPO
-- 上一届信息: 待确认
-- 本轮核验结果: 未找到2026年明确信息
-- 待跟踪点: 确认举办时间和地点
-- 优先检查网址: 待确认
-- Retrieval Hint: source=industry-media; query=异构集成 先进封装 CPO; note=未找到明确信息
-
 ### 闳康科技技术研讨会
 - 会议名称: 闳康科技技术研讨会（苏州站）
 - 上一届信息: 待确认
@@ -1172,14 +1237,6 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 优先检查网址: 待确认
 - Retrieval Hint: source=industry-media; query=半导体分立器件年会 先进封装; note=未找到明确信息
 
-### GaN氮化镓全场景应用技术研讨会
-- 会议名称: "破局·赋能"--GaN氮化镓全场景应用技术研讨会
-- 上一届信息: 待确认
-- 本轮核验结果: 未找到2026年明确信息
-- 待跟踪点: 确认举办时间和地点
-- 优先检查网址: 待确认
-- Retrieval Hint: source=industry-media; query=GaN 氮化镓 全场景应用; note=未找到明确信息
-
 ### PSiC固态变压器技术与应用高峰论坛
 - 会议名称: PSiC固态变压器技术与应用高峰论坛
 - 上一届信息: 待确认
@@ -1195,7 +1252,6 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 待跟踪点: 确认举办时间和地点
 - 优先检查网址: 待确认
 - Retrieval Hint: source=industry-media; query=COMSOL 多物理场 先进封装; note=未找到明确信息
-
 ## Search Notes
 
 - 本次核验的种子会议家族: 92个

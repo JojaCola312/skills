@@ -50,6 +50,33 @@ Use this skill when the user wants to compile, update, or maintain a semiconduct
 
 31. **The only valid reason to stop a run early is explicit user interruption (e.g., "stop", "pause", "that's enough for now"). Everything else — including token pressure, time spent, or partial completion — is not a valid stopping point.**
 
+32. **CRITICAL: Name Consistency Rule - 种子池标准名 = 输出sheet名称.** The conference name in the seed-pool audit (种子池核验清单) MUST exactly match the conference name in the output sheet (国内会议 or 持续跟踪名单). Do NOT use different names like "湾芯展WESEMiBAY" in seed pool but "湾芯展WESEMiBAY 2026" in output. If the official name includes year/edition, include it consistently everywhere.
+
+33. **CRITICAL: Count Consistency Rule - 计数必须精确匹配.** Before finalizing any report or Excel, run these validation checks:
+    - 种子池核验清单中标记为"国内会议"的数量 = 国内会议sheet的条目数
+    - 种子池核验清单中标记为"持续跟踪名单"的数量 = 持续跟踪名单sheet的条目数
+    - 种子池核验清单总条目 = 国内会议 + 持续跟踪名单 + 未完成
+    - 汇总信息中的数值必须与上述计数完全一致
+    - If any count mismatch, the report is INVALID and must be corrected before delivery.
+
+34. **CRITICAL: Three-Sheet Requirement.** Every exported workbook MUST have these 4 sheets:
+    1. 汇总信息 - with accurate counts
+    2. 国内会议 - all verified domestic conferences
+    3. 持续跟踪名单 - all unverified/tracking conferences (NEVER omit this sheet)
+    4. 种子池核验清单 - audit trail for every seed family
+    
+    Do NOT export a workbook without all 4 sheets unless the user explicitly requests a simplified version.
+
+35. **CRITICAL: No Silent Drop Rule.** Every seed family must appear in exactly one place in the output: 国内会议 OR 持续跟踪名单. Never drop a seed family silently. If a seed family cannot be verified, it goes to 持续跟踪名单, not disappeared.
+
+36. **Cross-Validation Before Delivery.** Before delivering any report, perform this check:
+    ```
+    Expected: seed_pool_total = domestic_count + tracking_count + unresolved_count
+    Actual: verify each sheet row count matches
+    Names: verify seed pool standard names match output sheet names exactly
+    ```
+    If any mismatch, fix it before the user sees the report.
+
 ## Browser Fallback Rule
 
 When normal keyword search and priority-source review still fail to produce usable evidence for a seed family, use Chrome DevTools MCP browser search as a fallback path if that tool is available in the runtime.
