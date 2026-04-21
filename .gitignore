@@ -16,3 +16,5 @@ ccc/trim_seed_keywords.py
 ccc/build_report_compare_fixed.py
 conference-track-wide-bandgap/半导体竞争对手追踪报告_2026-04-09.md
 *.pyc
+conference-track-wide-bandgap/scripts/update_ledger_and_excel.py
+半导体人才生态报告_2026-04-17.md
