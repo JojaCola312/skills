@@ -111,14 +111,61 @@ Add a new family only when all of the following are true:
 - there is at least one stable organizer, official, or high-confidence source
 - it is expected to recur rather than being a one-off activity
 
-## How To Work
+## How To Work - CRITICAL WORKFLOW
 
-- Maintain `references/conference-ledger.md` as the canonical working ledger.
-- Maintain `references/seed-audit.md` as the per-run audit file, separate from the canonical ledger.
-- Update the Markdown ledger first during each run, then regenerate Excel from the Markdown ledger at the end.
-- When re-checking unresolved conferences, update the same Markdown entries instead of rebuilding the ledger from scratch.
-- Use `references/collection-rules.md` for scope, inclusion, search, source priority, dedup, and export rules.
-- Use `references/mandatory-sites.md` for the required source sweep on every run.
-- Use `references/seed-conference-families.md` as the baseline conference pool that should be checked first.
-- Use `references/output-format.md` for the exact response structure and workbook expectations.
-- Use `scripts/sync_conference_ledger.py` to move data between the Markdown ledger and Excel workbook.
+### ⚠️ 正确流程（必须严格遵守）
+
+**每次运行必须按以下顺序执行：**
+
+1. **READ FIRST - 读取现有数据**
+   - 先读取 `skills/conference-track-wide-bandgap/references/conference-ledger.md`，了解已有的会议信息和状态
+   - 再读取 `skills/conference-track-wide-bandgap/references/seed-conference-families.md`，获取种子池列表
+   - **绝不允许跳过这一步直接开始搜索**
+   - **绝不允许写入 workspace 根目录的 references/ 目录**
+
+2. **SEARCH - 搜索核验**
+   - 根据种子池列表逐一搜索核验
+   - 对于已存在的会议条目：检查是否有更新（时间、地点、状态变化）
+   - 对于新发现的会议：评估是否符合收录标准
+
+3. **UPDATE MARKDOWN - 更新台账（增量更新）**
+   - **增量更新** `skills/conference-track-wide-bandgap/references/conference-ledger.md`，不是重写整个文件
+   - 已存在的条目：更新变化字段（如日期确定、状态变更）
+   - 新条目：追加到相应 section（Main Pool 或 Tracking List）
+   - 从 Tracking List 验证成功的会议：移动到 Main Pool 并从 Tracking List 删除
+   - **绝不允许用搜索结果直接覆盖整个 ledger**
+   - **绝不允许写入 workspace 根目录的 references/**
+
+4. **SYNC TO EXCEL - 同步到 Excel**
+   - **必须使用** `skills/conference-track-wide-bandgap/scripts/sync_conference_ledger.py` 进行 Markdown → Excel 转换
+   - **绝不允许自己写脚本**生成 Excel
+   - 命令：`python3 skills/conference-track-wide-bandgap/scripts/sync_conference_ledger.py md-to-xlsx skills/conference-track-wide-bandgap/references/conference-ledger.md skills/conference-track-wide-bandgap/references/2026半导体会议追踪.xlsx --audit-md skills/conference-track-wide-bandgap/references/seed-audit.md`
+
+5. **VALIDATE - 校验输出**
+   - 检查计数一致性（见 Rule 33）
+   - 检查名称一致性（见 Rule 32）
+   - 确认所有种子池家族都在输出中
+
+### ❌ 常见错误（绝对禁止）
+
+1. **不读 ledger 就开始搜索** - 必须先了解现有数据
+2. **搜索后重写整个 ledger** - 必须增量更新
+3. **自己写脚本生成 Excel** - 必须用 `sync_conference_ledger.py`
+4. **跳过 Markdown 直接写 Excel** - Markdown 是 source of truth
+5. **丢失已有条目** - 更新时保留所有现有信息
+6. **写错文件位置** - 必须写 skill 目录下，不许写 workspace 根目录
+
+### 参考文件（所有路径都是 skill 目录下）
+
+**所有文件都在 `skills/conference-track-wide-bandgap/` 目录下：**
+
+- `references/conference-ledger.md` - canonical working ledger（source of truth）
+- `references/seed-audit.md` - per-run audit file
+- `references/collection-rules.md` - scope, inclusion, search, source priority, dedup, and export rules
+- `references/mandatory-sites.md` - required source sweep on every run
+- `references/seed-conference-families.md` - baseline conference pool
+- `references/output-format.md` - exact response structure and workbook expectations
+- `scripts/sync_conference_ledger.py` - **REQUIRED** for Markdown ↔ Excel sync
+
+**⚠️ 绝不允许写入 workspace 根目录的 references/ 目录**
+**⚠️ 所有文件操作都必须在 `skills/conference-track-wide-bandgap/references/` 下**

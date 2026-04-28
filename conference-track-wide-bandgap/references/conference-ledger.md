@@ -13,13 +13,13 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 ## Summary
 
 - Report Title: 2026年中国半导体会议收集报告
-- 核验日期: 2026-04-20
+- 核验日期: 2026-04-28
 - 种子池家族总数: 96
 - 本轮已核验: 96
-- 确认国内会议: 68（合并处理后条目数）
-- 持续跟踪: 24
-- 合计: 92 条（部分种子家族合并）
-- 种子合并说明: 4个种子家族合并处理（SEMICON+CSTIC+CS Asia→1条等）
+- 确认国内会议: 74（本轮新增6个）
+- 持续跟踪: 22
+- 合计: 96 条
+- 本轮新增: 6个新会议家族
 
 ### 重点提示
 
@@ -97,10 +97,10 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 会议类型: 国内行业论坛
 - 官方网站/报名链接: https://www.fsemi.tech/
 - 主办单位: Flink启明产链、苏州晶和半导体科技有限公司
-- 信息来源: 行业媒体；https://www.fsemi.tech/cms/semiconductor.html
+- 信息来源: 官网；https://www.eet-china.com/mp/a487827.html
 - 与半导体相关性: 直接相关：宽禁带半导体材料与热管理技术。
-- 最新状态: 即将举办，报名中
-- 最后核验: 2026-04-15
+- 最新状态: 已结束
+- 最后核验: 2026-04-27
 - Retrieval Hint: source=industry-media; query=未来半导体产业创新大会; path=homepage->events; url=https://www.fsemi.tech/
 
 ### 杭州长芯展
@@ -149,33 +149,33 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - Retrieval Hint: source=official-site; query=武汉半导体博览会; path=homepage; url=https://powersemi-expo.com/
 
 ### CSPT 2026中国半导体封装测试展
-- 会议名称: CSPT 2026中国半导体封装测试展
-- 会议主题: 半导体封装测试技术
-- 届次/年份: 2026年
-- 起止日期: 2026-05-27 至 2026-05-29
-- 会议地点: 无锡太湖国际博览中心
+- 会议名称: CSPT 2026中国半导体封装测试技术与市场大会
+- 会议主题: 链接芯生态·智创新机遇·玻动芯未来
+- 届次/年份: 第24届 / 2026年
+- 起止日期: 2026-05-28 至 2026-05-29
+- 会议地点: 无锡国际会议中心
 - 会议类型: 国内行业展会
 - 官方网站/报名链接: https://www.cspt-expo.com/
-- 主办单位: 待确认
-- 信息来源: 官网；https://www.cspt-expo.com/
-- 与半导体相关性: 直接相关：半导体封装测试。
-- 最新状态: 即将举办
-- 最后核验: 2026-04-15
+- 主办单位: 未来半导体
+- 信息来源: 官网；https://www.sohu.com/a/1013557866_121198369
+- 与半导体相关性: 直接相关：半导体封装测试、TGV玻璃基板。
+- 最新状态: 即将举办，300+参展企业，2万+观众
+- 最后核验: 2026-04-27
 - Retrieval Hint: source=official-site; query=CSPT 2026; path=homepage; url=https://www.cspt-expo.com/
 
 ### CSPSD 2026功率半导体器件与集成电路会议
 - 会议名称: 2026功率半导体器件与集成电路会议 (CSPSD 2026)
 - 会议主题: 功率半导体器件与集成电路
 - 届次/年份: 2026年
-- 起止日期: 2026-06-11 至 2026-06-13
+- 起止日期: 2026-06-25 至 2026-06-27
 - 会议地点: 上海
 - 会议类型: 国内学术会议
-- 官方网站/报名链接: 待确认
-- 主办单位: 待确认
-- 信息来源: 行业媒体；https://www.big-bit.com/wap/news/405416.html
+- 官方网站/报名链接: https://cj.sina.cn/articles/view/5952915720/162d2490806703nake
+- 主办单位: 中国科学院上海微系统与信息技术研究所、极智半导体产业网
+- 信息来源: 官方征文通知；https://cj.sina.cn/articles/view/5952915720/162d2490806703nake
 - 与半导体相关性: 直接相关：功率半导体器件与集成电路。
-- 最新状态: 征稿中
-- 最后核验: 2026-04-15
+- 最新状态: 征文中，征文截止5月10日
+- 最后核验: 2026-04-27
 - Retrieval Hint: source=industry-media; query=CSPSD 2026; note=官网待确认
 
 ### 中国MEMS制造大会暨微纳制造与传感器展览会
@@ -599,18 +599,18 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - Retrieval Hint: source=industry-media; query=IC-SRDI; path=homepage; url=http://www.fsemi.tech/
 
 ### 九峰山论坛
-- 会议名称: 九峰山论坛暨中国光谷国际化合物半导体产业博览会
-- 会议主题: 核芯聚变·链动未来
-- 届次/年份: 2026年
+- 会议名称: 2026九峰山论坛暨中国光谷国际化合物半导体产业博览会
+- 会议主题: 新赛道、新技术、新产品、新市场
+- 届次/年份: 第四届 / 2026年
 - 起止日期: 2026-04-23 至 2026-04-25
 - 会议地点: 武汉光谷科技会展中心
 - 会议类型: 国内行业论坛
 - 官方网站/报名链接: https://www.c-semi.com.cn/
 - 主办单位: 第三代半导体产业技术创新战略联盟、九峰山实验室
-- 信息来源: 官网；https://www.c-semi.com.cn/h-col-114.html
-- 与半导体相关性: 直接相关：化合物半导体。
-- 最新状态: 即将举办
-- 最后核验: 2026-04-16
+- 信息来源: 官网；https://www.c-semi.com.cn/h-col-114.html；第一财经
+- 与半导体相关性: 直接相关：化合物半导体（GaN/SiC/Ga2O3）。
+- 最新状态: 正在举办，1000+企业参会，八大高峰论坛
+- 最后核验: 2026-04-27
 - Retrieval Hint: source=official-site; query=九峰山论坛; path=homepage; url=https://www.c-semi.com.cn/
 
 ### 第三代半导体检测技术创新与应用论坛 ACCSI
@@ -977,15 +977,166 @@ This file is the canonical ledger. Update this Markdown first, then regenerate E
 - 会议名称: 第十二届国际第三代半导体论坛 (IFWS) 暨第二十三届中国国际半导体照明论坛 (SSLCHINA)
 - 会议主题: 第三代半导体、半导体照明技术
 - 届次/年份: 第十二届 IFWS / 第二十三届 SSLCHINA / 2026年
-- 起止日期: 2026-11-XX（第十二届，官网确认2026年11月苏州举办，具体日期待公布）
+- 起止日期: 2026-11（第十二届确认2026年11月苏州举办，具体日期待公布）
 - 会议地点: 江苏苏州
 - 会议类型: 国际学术会议
 - 官方网站/报名链接: http://www.ifws.org.cn/
 - 主办单位: 第三代半导体产业技术创新战略联盟(CASA)
-- 信息来源: 官网；http://www.ifws.org.cn/
+- 信息来源: 官网；http://www.ifws.org.cn/；http://www.casa-china.cn/
 - 与半导体相关性: 直接相关：第三代半导体材料与器件。
 - 最新状态: 论文征集中，第十二届确认2026年11月苏州
-- 最后核验: 2026-04-20
+- 最后核验: 2026-04-27
+- Retrieval Hint: source=official-site; query=IFWS SSLCHINA; path=homepage; url=http://www.ifws.org.cn/
+
+### FINE 2026 先进半导体展
+- 会议名称: FINE 2026 先进半导体展
+- 会议主题: 金刚石、碳化硅、氮化镓、氧化镓等第三/四代半导体材料与先进封装
+- 届次/年份: 2026年
+- 起止日期: 2026-06-10 至 2026-06-12
+- 会议地点: 上海新国际博览中心N1馆
+- 会议类型: 国内行业展会
+- 官方网站/报名链接: https://www.eet-china.com/mp/a485218.html
+- 主办单位: DT新材料
+- 信息来源: 官网；https://www.eet-china.com/mp/a485218.html
+- 与半导体相关性: 直接相关：第三/四代半导体材料与先进封装技术
+- 最新状态: 报名中
+- 最后核验: 2026-04-27
+- Retrieval Hint: source=web-search; query=FINE 先进半导体展; path=homepage
+
+### IICIE 2026 国际集成电路创新博览会
+- 会议名称: 2026 IICIE国际集成电路创新博览会（IC创新博览会）
+- 会议主题: 跨界融合·全链协同，共筑特色芯生态
+- 届次/年份: 2026年
+- 起止日期: 2026-09-09 至 2026-09-11
+- 会议地点: 深圳国际会展中心（宝安）
+- 会议类型: 国际行业展会
+- 官方网站/报名链接: https://iicieexpo.com/
+- 主办单位: Informa Markets
+- 信息来源: 官网；https://iicieexpo.com/；https://news.qq.com/rain/a/20260209A03WVB00
+- 与半导体相关性: 直接相关：集成电路全产业链
+- 最新状态: 招展中
+- 最后核验: 2026-04-27
+- Retrieval Hint: source=official-site; query=IICIE 国际集成电路创新博览会; path=homepage; url=https://iicieexpo.com/
+
+### CMP与先进封装材料论坛
+- 会议名称: 2026首届CMP与先进封装材料论坛
+- 会议主题: CMP材料、先进封装技术、2.5D/3D集成、Chiplet
+- 届次/年份: 首届 / 2026年
+- 起止日期: 2026-07-15 至 2026-07-16
+- 会议地点: 苏州
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.eet-china.com/mp/a490546.html
+- 主办单位: 亚化咨询
+- 信息来源: 行业媒体；https://cj.sina.com.cn/articles/view/5953190046/162d6789e067031eta
+- 与半导体相关性: 直接相关：CMP材料是半导体制造关键工艺
+- 最新状态: 征文征展中
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=web-search; query=CMP先进封装材料论坛 苏州; url=https://www.eet-china.com/mp/a490546.html
+
+### 世界碳化硅大会 SiC Day
+- 会议名称: 2026世界碳化硅大会 (SiC Day)
+- 会议主题: 碳化硅半导体技术与应用
+- 届次/年份: 2026年
+- 起止日期: 2026-06-14（14:00-17:00）
+- 会议地点: 待确认（官网预告）
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://sic.com.cn/
+- 主办单位: 碳化硅网
+- 信息来源: 官网；https://sic.com.cn/；https://www.power.com/zh-hans/community/events/chargerlab-2026-sic-day
+- 与半导体相关性: 直接相关：碳化硅半导体
+- 最新状态: 筹备中，演讲嘉宾即将揭晓
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=official-site; query=世界碳化硅大会 SiC Day; url=https://sic.com.cn/
+
+### 电子半导体产业创新发展大会暨国际电子电路展览会
+- 会议名称: 2026电子半导体产业创新发展大会暨国际电子电路（大湾区）展览会 (CPCA Show Plus 2026)
+- 会议主题: 电子电路、半导体产业创新发展
+- 届次/年份: 2026年
+- 起止日期: 2026-10-27 至 2026-10-29
+- 会议地点: 深圳国际会展中心（宝安）
+- 会议类型: 国内行业展会
+- 官方网站/报名链接: https://www.sohu.com/a/1006784723_122472555
+- 主办单位: CPCA中国电子电路行业协会
+- 信息来源: 行业媒体；https://www.sohu.com/a/977540009_122386691
+- 与半导体相关性: 高度相关：半导体与电子电路产业链
+- 最新状态: 招展中
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=web-search; query=电子半导体产业创新发展大会 大湾区; url=https://www.sohu.com/a/1006784723_122472555
+
+### 中国（上海）半导体产业与应用博览会
+- 会议名称: 2026中国（上海）半导体产业与应用博览会 (IC Expo Shanghai)
+- 会议主题: 半导体产业与应用
+- 届次/年份: 2026年
+- 起止日期: 2026-11-10 至 2026-11-12
+- 会议地点: 上海新国际博览中心
+- 会议类型: 国内行业展会
+- 官方网站/报名链接: https://www.jufair.com/exhibition-27-269-1-0-0-0-1/
+- 主办单位: 待确认
+- 信息来源: 展会平台；https://www.jufair.com/exhibition-27-269-1-0-0-0-1/
+- 与半导体相关性: 直接相关：半导体产业与应用
+- 最新状态: 筹备中
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=web-search; query=中国半导体产业与应用博览会 上海; url=https://www.jufair.com/exhibition-27-269-1-0-0-0-1/
+
+### 上海国际精密陶瓷暨功率半导体产业链展览会
+- 会议名称: 2026第五届上海国际精密陶瓷暨功率半导体产业链展览会
+- 会议主题: 精密陶瓷、功率半导体、IGBT产业链
+- 届次/年份: 第五届 / 2026年
+- 起止日期: 2026-12-09 至 2026-12-11
+- 会议地点: 上海新国际博览中心
+- 会议类型: 国内行业展会
+- 官方网站/报名链接: http://www.igbt-expo.cn/
+- 主办单位: 博寒展览、励悦展览
+- 信息来源: 官网；http://www.igbt-expo.cn/
+- 与半导体相关性: 直接相关：功率半导体与封装材料
+- 最新状态: 筹备中
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=official-site; query=精密陶瓷功率半导体展 上海; url=http://www.igbt-expo.cn/
+
+### 武汉第三代半导体及柔性电子产业展览会
+- 会议名称: 2026武汉国际第三代半导体及柔性电子产业展览会
+- 会议主题: 第三代半导体、柔性电子产业
+- 届次/年份: 2026年
+- 起止日期: 2026-09-22 至 2026-09-24
+- 会议地点: 武汉国际博览中心
+- 会议类型: 国内行业展会
+- 官方网站/报名链接: https://www.sohu.com/a/1006793292_121863707
+- 主办单位: 待确认
+- 信息来源: 行业媒体；https://www.sohu.com/a/1006793292_121863707
+- 与半导体相关性: 直接相关：第三代半导体
+- 最新状态: 筹备中
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=web-search; query=武汉第三代半导体柔性电子展; url=https://www.sohu.com/a/1006793292_121863707
+
+### ACCON高端芯片产业创新发展大会
+- 会议名称: ACCON 2026高端芯片产业创新发展大会
+- 会议主题: 高端芯片产业创新、半导体材料专委会
+- 届次/年份: 2026年（预计，上届2025年11月）
+- 起止日期: 待确认（上届2025-11-06，武汉）
+- 会议地点: 武汉（预计）
+- 会议类型: 国内行业论坛
+- 官方网站/报名链接: https://www.noeic.com/news_center/1142.html
+- 主办单位: 武汉大学、武汉产业创新发展研究院、高端芯片产业创新发展联盟
+- 信息来源: 官网；https://www.noeic.com/news_center/1142.html
+- 与半导体相关性: 直接相关：高端芯片产业
+- 最新状态: 上届已举办，2026年待确认
+- 最后核验: 2026-04-28
+- Retrieval Hint: source=official-site; query=ACCON 高端芯片大会; url=https://www.noeic.com/news_center/1142.html
+
+### ICICM 2026 集成电路与微系统国际会议
+- 会议名称: 第十一届集成电路与微系统国际会议 (ICICM 2026)
+- 会议主题: 集成电路与微系统技术
+- 届次/年份: 第十一届 / 2026年
+- 起止日期: 2026-10-16 至 2026-10-18
+- 会议地点: 西安
+- 会议类型: 国际学术会议
+- 官方网站/报名链接: https://icicm.net/chinese.html
+- 主办单位: 西安交通大学、东南大学、电子科技大学
+- 信息来源: 官网；https://icicm.net/chinese.html
+- 与半导体相关性: 直接相关：集成电路与微系统
+- 最新状态: 论文征集中
+- 最后核验: 2026-04-27
+- Retrieval Hint: source=official-site; query=ICICM 集成电路微系统; path=homepage; url=https://icicm.net/
 - Retrieval Hint: source=official-site; query=IFWS SSLCHINA; path=homepage; url=http://www.ifws.org.cn/
 
 
